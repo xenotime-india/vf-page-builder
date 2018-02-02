@@ -20,7 +20,7 @@ jQuery(function() {
     jQuery('#dateField').val(moment().add(-1, 'M').format('YYYY-MM-DD'));
     console.log("Ready for API fun!");
     var types = [{type: 'CustomObject', folder: null}];
-    conn.metadata.list(types, apiVersion)
+    sforce.metadata.list(types, apiVersion)
         .then(function(metadata) {
             console.log(metadata);
         })
