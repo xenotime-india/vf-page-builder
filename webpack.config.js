@@ -1,10 +1,13 @@
 var path = require('path');
 var webpack = require('webpack');
 module.exports = {
-    entry: './outsideExtension/src/scripts/app.js',
+    entry: {
+        app: './outsideExtension/src/scripts/app.js',
+        onload: './outsideExtension/src/scripts/onload.js'
+    },
     output: {
         path: path.resolve(__dirname,'outsideExtension' ,'build'),
-        filename: 'app.bundle.js'
+        filename: '[name].bundle.js'
     },
     module: {
         loaders: [
