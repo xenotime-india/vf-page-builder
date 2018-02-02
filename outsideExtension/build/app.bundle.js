@@ -52360,8 +52360,8 @@ exports.push([module.i, ".logo-container{\n    left: 50px;\n    position: absolu
 
 // Material Bootstrap Wizard Functions
 
-searchVisible = 0;
-transparent = true;
+var searchVisible = 0;
+var transparent = true;
 
 $(document).ready(function () {
 

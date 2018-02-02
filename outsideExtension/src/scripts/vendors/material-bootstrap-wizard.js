@@ -34,8 +34,8 @@
 
 // Material Bootstrap Wizard Functions
 
-searchVisible = 0;
-transparent = true;
+let searchVisible = 0;
+let transparent = true;
 
 $(document).ready(function(){
 
