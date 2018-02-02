@@ -1,17 +1,17 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 import Promise from 'bluebird';
-window.jQuery = require('jquery');
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
-import './../styles/material-bootstrap-wizard.css';
-import './../styles/demo.css';
-import './vendors/jquery.bootstrap';
-import './vendors/material-bootstrap-wizard';
-import './vendors/jquery.validate.min';
 import sforce from './sforce';
 import { showError, showLoading, hideLoading } from './helper';
 const apiVersion = '41.0';
 const connection = sforce();
 
+ReactDOM.render(
+    <h1>Hello, world!</h1>,
+    document.getElementById('root')
+);
+/*
 class app {
     constructor() {
         console.log("Ready for API fun!");
@@ -41,4 +41,4 @@ class app {
 
 jQuery("link[rel='stylesheet']").remove();
 jQuery('body').html('');
-new app();
+new app();*/

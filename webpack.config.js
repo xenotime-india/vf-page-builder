@@ -16,7 +16,7 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 query: {
-                    presets: ['es2015']
+                    presets: ['es2015', 'react']
                 }
             },
             { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' }
