@@ -34192,7 +34192,7 @@ $(document).ready(function(){
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {
+/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery, jQuery) {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -34216,7 +34216,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 __webpack_provided_window_dot_jQuery = __webpack_require__(22);
 
-
 var apiVersion = '41.0';
 var connection = (0, _sforce2.default)();
 
@@ -34226,15 +34225,23 @@ var app = function () {
 
         console.log("Ready for API fun!");
         this.customObjects = [];
-        this.getAllCustomObjects();
+        this.init();
     }
 
     _createClass(app, [{
-        key: 'getAllCustomObjects',
-        value: function getAllCustomObjects() {
-            (0, _helper.showLoading)();
-            connection.metadata.list([{ type: 'CustomObject', folder: null }], apiVersion).then(function (metadata) {
-                this.customObjects = metadata.map(function (item) {
+        key: 'init',
+        value: function init() {
+            var _this = this;
+
+            new _bluebird2.default(function (resolve, reject) {
+                jQuery("body").load("https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/template.html", function () {
+                    resolve();
+                });
+            }).then(function () {
+                (0, _helper.showLoading)();
+                return connection.metadata.list([{ type: 'CustomObject', folder: null }], apiVersion);
+            }).then(function (metadata) {
+                _this.customObjects = metadata.map(function (item) {
                     return item.fullName;
                 });
             }).catch(_helper.showError);
@@ -34245,7 +34252,7 @@ var app = function () {
 }();
 
 new app();
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(22)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(22), __webpack_require__(22)))
 
 /***/ }),
 /* 105 */

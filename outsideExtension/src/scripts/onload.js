@@ -102,24 +102,7 @@ if(window.location.href.indexOf('.visual.force.com/') >= 0) {
     sfdcPage.dialogs['SFDCDialog'].setContentInnerHTML('<div>' + message + '</div>'); // sent content on modal pop up (use any text or html code.)
     sfdcPage.dialogs['SFDCDialog'].show();// show modal popup
 } else {
-    load.js('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
-        .then(function () {
-            jQuery("link[rel='stylesheet']").remove();
-            jQuery('body').html('');
-            return new Promise(function (resolve, reject) {
-                jQuery("body").load("https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/template.html", function () {
-                    resolve();
-                });
-            });
-        })
-        .then(function () {
-            return load.js('https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/scripts/app.bundle.js');
-        })
-        .then(function () {
-            if (jQuery('#sfdcConsoleContainer').length > 0) {
-                jQuery('#sfdcConsoleContainer').show();
-            }
-        })
+    load.js('https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/scripts/app.bundle.js')
         .catch(function (err) {
             console.error('Error', err);
         });
