@@ -113,20 +113,7 @@ if(window.location.href.indexOf('.visual.force.com/') >= 0) {
             });
         })
         .then(function () {
-            return load.js('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
-        })
-        .then(function () {
-            return Promise.all(filesToLoad.map(function (item) {
-                switch (item.type) {
-                    case 'js':
-                        return load.js(item.url);
-                    case 'css':
-                        return load.css(item.url);
-                }
-            }));
-        })
-        .then(function () {
-            return load.js('https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/scripts/app.min.js');
+            return load.js('https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/scripts/app.bundle.js');
         })
         .then(function () {
             if (jQuery('#sfdcConsoleContainer').length > 0) {
