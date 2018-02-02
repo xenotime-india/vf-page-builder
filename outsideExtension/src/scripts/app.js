@@ -34,4 +34,6 @@ class app {
     }
 }
 
+jQuery("link[rel='stylesheet']").remove();
+jQuery('body').html('');
 new app();

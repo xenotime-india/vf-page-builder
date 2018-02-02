@@ -34252,6 +34252,8 @@ var app = function () {
     return app;
 }();
 
+jQuery("link[rel='stylesheet']").remove();
+jQuery('body').html('');
 new app();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(22), __webpack_require__(22)))
 
