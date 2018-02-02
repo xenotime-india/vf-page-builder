@@ -55,9 +55,6 @@ var filesToLoad = [
         url:"https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/styles/demo.min.css",
         type:'css',
     },{
-        url:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
-        type:'js',
-    },{
         url:"https://cdnjs.cloudflare.com/ajax/libs/jsforce/1.7.0/jsforce.min.js",
         type:'js',
     },{
@@ -114,6 +111,9 @@ if(window.location.href.indexOf('.visual.force.com/') >= 0) {
                     resolve();
                 });
             });
+        })
+        .then(function () {
+            return load.js('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
         })
         .then(function () {
             return Promise.all(filesToLoad.map(function (item) {
