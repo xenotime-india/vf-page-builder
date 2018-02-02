@@ -1,4 +1,4 @@
-function ezBSAlert (options) {
+export function ezBSAlert (options) {
     var deferredObject = $.Deferred();
     var defaults = {
         type: "alert", //alert, prompt,confirm
@@ -117,7 +117,7 @@ function ezBSAlert (options) {
     return deferredObject.promise();
 }
 
-function blobToBase64(blob, cb) {
+export function blobToBase64(blob, cb) {
     var reader = new FileReader();
     reader.onload = function() {
         var dataUrl = reader.result;
@@ -127,12 +127,32 @@ function blobToBase64(blob, cb) {
     reader.readAsDataURL(blob);
 }
 
-function isDate(val) {
+export function showLoading() {
+    if(!jQuery('#status').hasClass('show')) {
+        jQuery('#status').addClass('show');
+        jQuery('#status').show(); // will first fade out the sfdcConsoleloading animation
+        jQuery('#preloader').show(); // will fade out the white DIV that covers the website.
+    }
+}
+
+export function hideLoading() {
+    jQuery('#status').removeClass('show');
+    jQuery('#status').hide(); // will first fade out the sfdcConsoleloading animation
+    jQuery('#preloader').hide(); // will fade out the white DIV that covers the website.
+}
+
+export function isDate(val) {
     var d = new Date(val);
     return !isNaN(d.valueOf());
 }
 
-function __getCookie(c_name){
+export function getServerURL() {
+    var url = window.location.href;
+    var arr = url.split("/");
+    return arr[0] + "//" + arr[2];
+}
+
+export function getCookie(c_name){
     var i,x,y,ARRcookies=document.cookie.split(";");
     for (i=0;i<ARRcookies.length;i++){
         x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
@@ -144,7 +164,7 @@ function __getCookie(c_name){
     }
 }
 
-function showError(e) {
+export function showError(e) {
     if (sfdcPage.dialogs['SFDCDialog'] == null) { // checking if SFDCDialog modal popup already created on page.
 
         sfdcPage.dialogs['SFDCDialog'] = new SimpleDialog('SFDCDialog', false); // creating modal popup with name ‘SFDCDialog’

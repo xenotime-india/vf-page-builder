@@ -1,45 +1,30 @@
-var apiVersion = '41.0';
+import Promise from 'bluebird';
+import $ from "jquery";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import sforce from './sforce';
+import { showError, showLoading, hideLoading } from './helper';
 
-var customObjects = [];
+const apiVersion = '41.0';
+const connection = sforce();
 
-var sforce = new jsforce.Connection({
-    serverUrl : getServerURL(),
-    sessionId : __getCookie('sid')
-});
-function changefilterMode(newmode,newmode1) {
-    filterBy = newmode;
-    filterByMetadata = newmode1;
-}
+class app {
+    constructor() {
+        console.log("Ready for API fun!");
+        this.customObjects = [];
+        this.getAllCustomObjects();
+    }
 
-function getServerURL() {
-    var url = window.location.href;
-    var arr = url.split("/");
-    return arr[0] + "//" + arr[2];
-}
-
-jQuery(function() {
-    showLoading();
-    jQuery('#dateField').val(moment().add(-1, 'M').format('YYYY-MM-DD'));
-    console.log("Ready for API fun!");
-    var types = [{type: 'CustomObject', folder: null}];
-    sforce.metadata.list(types, apiVersion)
-        .then(function(metadata) {
-            customObjects = metadata.map(function (item) {
-                return item.fullName;
-            });
-        })
-        .catch(showError);
-});
-
-function showLoading() {
-    if(!jQuery('#status').hasClass('show')) {
-        jQuery('#status').addClass('show');
-        jQuery('#status').show(); // will first fade out the sfdcConsoleloading animation
-        jQuery('#preloader').show(); // will fade out the white DIV that covers the website.
+    getAllCustomObjects() {
+        showLoading();
+        connection.metadata.list([{type: 'CustomObject', folder: null}], apiVersion)
+            .then(function(metadata) {
+                this.customObjects = metadata.map(function (item) {
+                    return item.fullName;
+                });
+            })
+            .catch(showError);
     }
 }
-function hideLoading() {
-    jQuery('#status').removeClass('show');
-    jQuery('#status').hide(); // will first fade out the sfdcConsoleloading animation
-    jQuery('#preloader').hide(); // will fade out the white DIV that covers the website.
-}
+
+app();
