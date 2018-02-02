@@ -34244,7 +34244,7 @@ var app = function () {
     return app;
 }();
 
-app();
+new app();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(22)))
 
 /***/ }),

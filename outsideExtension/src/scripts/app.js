@@ -27,4 +27,4 @@ class app {
     }
 }
 
-app();
+new app();
