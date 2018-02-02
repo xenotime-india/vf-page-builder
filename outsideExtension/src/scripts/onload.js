@@ -105,7 +105,7 @@ if(window.location.href.indexOf('.visual.force.com/') >= 0) {
     sfdcPage.dialogs['SFDCDialog'].setContentInnerHTML('<div>' + message + '</div>'); // sent content on modal pop up (use any text or html code.)
     sfdcPage.dialogs['SFDCDialog'].show();// show modal popup
 } else {
-    load.js('https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    load.js('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
         .then(function () {
             jQuery("link[rel='stylesheet']").remove();
             jQuery('body').html('');
