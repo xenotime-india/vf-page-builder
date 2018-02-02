@@ -139,6 +139,7 @@ gulp.task('outsideExtension-styles', function() {
 // 		.pipe(minifycss({root: 'src/styles', keepSpecialComments: 0}))
 // 		.pipe(gulp.dest('build/styles'));
     return gulp.src('outsideExtension/src/styles/**')
+        .pipe(minifycss({root: 'outsideExtension/src/styles', keepSpecialComments: 0}))
         .pipe(gulp.dest('outsideExtension/build/styles'));
 });
 

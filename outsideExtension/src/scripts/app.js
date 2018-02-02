@@ -1,5 +1,7 @@
 var apiVersion = '41.0';
 
+var customObjects = [];
+
 var sforce = new jsforce.Connection({
     serverUrl : getServerURL(),
     sessionId : __getCookie('sid')
@@ -22,7 +24,9 @@ jQuery(function() {
     var types = [{type: 'CustomObject', folder: null}];
     sforce.metadata.list(types, apiVersion)
         .then(function(metadata) {
-            console.log(metadata);
+            customObjects = metadata.map(function (item) {
+                return item.fullName;
+            });
         })
         .catch(showError);
 });

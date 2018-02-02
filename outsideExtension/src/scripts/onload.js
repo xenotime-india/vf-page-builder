@@ -49,7 +49,10 @@ var filesToLoad = [
         url: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
         type: 'css',
     },{
-        url:"https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css",
+        url:"https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/styles/material-bootstrap-wizard.css",
+        type:'css',
+    },{
+        url:"https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/styles/demo.css",
         type:'css',
     },{
         url:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
