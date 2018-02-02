@@ -34204,6 +34204,16 @@ __webpack_require__(107);
 
 __webpack_require__(117);
 
+__webpack_require__(188);
+
+__webpack_require__(190);
+
+__webpack_require__(192);
+
+__webpack_require__(193);
+
+__webpack_require__(194);
+
 var _sforce = __webpack_require__(118);
 
 var _sforce2 = _interopRequireDefault(_sforce);
@@ -51741,6 +51751,1195 @@ jsforce.on('connection:new', function (conn) {
 });
 
 module.exports = Tooling;
+
+/***/ }),
+/* 188 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(189);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(115)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../node_modules/css-loader/index.js!./material-bootstrap-wizard.css", function() {
+		var newContent = require("!!../../../node_modules/css-loader/index.js!./material-bootstrap-wizard.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 189 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(110)(false);
+// imports
+
+
+// module
+exports.push([module.i, "/*! =========================================================\n *\n Material Bootstrap Wizard - V1.0.1\n*\n* =========================================================\n*\n* Copyright 2016 Creative Tim (http://www.creative-tim.com/product/material-bootstrap-wizard)\n *\n *                       _oo0oo_\n *                      o8888888o\n *                      88\" . \"88\n *                      (| -_- |)\n *                      0\\  =  /0\n *                    ___/`---'\\___\n *                  .' \\|     |// '.\n *                 / \\|||  :  |||// \\\n *                / _||||| -:- |||||- \\\n *               |   | \\  -  /// |   |\n *               | \\_|  ''\\---/''  |_/ |\n *               \\  .-\\__  '-'  ___/-. /\n *             ___'. .'  /--.--\\  `. .'___\n *          .\"\" '<  `.___\\_<|>_/___.' >' \"\".\n *         | | :  `- \\`.;`\\ _ /`;.`/ - ` : | |\n *         \\  \\ `_.   \\_ __\\ /__ _/   .-` /  /\n *     =====`-.____`.___ \\_____/___.-`___.-'=====\n *                       `=---='\n *\n *     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n *\n *               Buddha Bless:  \"No Bugs\"\n *\n * ========================================================= */\nbody {\n  background-color: #E5E5E5;\n  color: #3C4858;\n}\nbody.inverse {\n  background: #333333;\n}\nbody.inverse, body.inverse .form-control {\n  color: #ffffff;\n}\nbody.inverse .modal,\nbody.inverse .modal .form-control,\nbody.inverse .panel-default,\nbody.inverse .panel-default .form-control,\nbody.inverse .card,\nbody.inverse .card .form-control {\n  background-color: initial;\n  color: initial;\n}\n\nblockquote p {\n  font-style: italic;\n}\n\n.life-of-material-kit {\n  background: #FFFFFF;\n}\n\nbody, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {\n  font-family: \"Roboto\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 300;\n  line-height: 1.5em;\n}\n\n.serif-font {\n  font-family: \"Roboto Slab\", \"Times New Roman\", serif;\n}\n\na {\n  color: #9c27b0;\n}\na:hover, a:focus {\n  color: #89229b;\n  text-decoration: none;\n}\na.text-info:hover, a.text-info:focus {\n  color: #00a5bb;\n}\na .material-icons {\n  vertical-align: middle;\n}\n\nlegend {\n  border-bottom: 0;\n}\n\n* {\n  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);\n  -webkit-tap-highlight-color: transparent;\n}\n*:focus {\n  outline: 0;\n}\n\na:focus, a:active,\nbutton:active, button:focus, button:hover,\nbutton::-moz-focus-inner,\ninput[type=\"reset\"]::-moz-focus-inner,\ninput[type=\"button\"]::-moz-focus-inner,\ninput[type=\"submit\"]::-moz-focus-inner,\nselect::-moz-focus-inner,\ninput[type=\"file\"] > input[type=\"button\"]::-moz-focus-inner {\n  outline: 0 !important;\n}\n\n.image-container {\n  min-height: 100vh;\n  background-position: center center;\n  background-size: cover;\n  position: relative;\n}\n.image-container:before {\n  content: \"\";\n  display: block;\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background: #000000;\n  opacity: .3;\n}\n\n.made-with-mk {\n  width: 50px;\n  height: 50px;\n  display: block;\n  position: fixed;\n  z-index: 555;\n  bottom: 40px;\n  right: 40px;\n  border-radius: 30px;\n  background-color: rgba(16, 16, 16, 0.35);\n  border: 1px solid rgba(255, 255, 255, 0.15);\n  color: #FFFFFF;\n  cursor: pointer;\n  padding: 10px 12px;\n  white-space: nowrap;\n  overflow: hidden;\n  -webkit-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);\n  -moz-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);\n  -o-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);\n  transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);\n}\n.made-with-mk:hover, .made-with-mk:active, .made-with-mk:focus {\n  width: 218px;\n  color: #FFFFFF;\n  transition-duration: .55s;\n  padding: 10px 19px;\n}\n.made-with-mk:hover .made-with, .made-with-mk:active .made-with, .made-with-mk:focus .made-with {\n  opacity: 1;\n}\n.made-with-mk:hover .brand, .made-with-mk:active .brand, .made-with-mk:focus .brand {\n  left: 0;\n}\n.made-with-mk .brand,\n.made-with-mk .made-with {\n  float: left;\n}\n.made-with-mk .brand {\n  position: relative;\n  top: 4px;\n  left: -1px;\n  letter-spacing: 1px;\n  vertical-align: middle;\n  font-size: 16px;\n  font-weight: 600;\n}\n.made-with-mk .made-with {\n  color: rgba(255, 255, 255, 0.6);\n  position: absolute;\n  left: 58px;\n  top: 14px;\n  opacity: 0;\n  margin: 0;\n  -webkit-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);\n  -moz-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);\n  -o-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);\n  transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);\n}\n.made-with-mk .made-with strong {\n  font-weight: 400;\n  color: rgba(255, 255, 255, 0.9);\n}\n\n.wizard-container {\n  padding-top: 100px;\n  z-index: 3;\n}\n.wizard-container .wizard-navigation {\n  position: relative;\n}\n\nh1, .h1 {\n  font-size: 3.8em;\n  line-height: 1.15em;\n}\n\nh2, .h2 {\n  font-size: 2.6em;\n}\n\nh3, .h3 {\n  font-size: 1.825em;\n  line-height: 1.4em;\n  margin: 20px 0 10px;\n}\n\nh4, .h4 {\n  font-size: 1.3em;\n  line-height: 1.4em;\n}\n\nh5, .h5 {\n  font-size: 1.25em;\n  line-height: 1.4em;\n  margin-bottom: 15px;\n}\n\nh6, .h6 {\n  font-size: 0.9em;\n  text-transform: uppercase;\n}\n\n.title,\n.card-title,\n.wizard-title {\n  font-weight: 700;\n}\n.title,\n.title a,\n.card-title,\n.card-title a,\n.wizard-title,\n.wizard-title a {\n  color: #3C4858;\n  text-decoration: none;\n}\n\nh2.title {\n  margin-bottom: 30px;\n}\n\n.description,\n.card-description,\n.footer-big p {\n  color: #999999;\n}\n\n.text-warning {\n  color: #ff9800;\n}\n\n.text-primary {\n  color: #9c27b0;\n}\n\n.text-danger {\n  color: #f44336;\n}\n\n.text-success {\n  color: #4caf50;\n}\n\n.text-info {\n  color: #00bcd4;\n}\n\n.card {\n  background-color: #FFFFFF;\n  padding: 10px 0;\n  width: 100%;\n  border-radius: 6px;\n  color: rgba(0,0,0, 0.87);\n  background: #fff;\n}\n\n.wizard-card {\n  min-height: 410px;\n  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);\n}\n.wizard-card .picture-container {\n  position: relative;\n  cursor: pointer;\n  text-align: center;\n}\n.wizard-card .picture {\n  width: 106px;\n  height: 106px;\n  background-color: #999999;\n  border: 4px solid #CCCCCC;\n  color: #FFFFFF;\n  border-radius: 50%;\n  margin: 5px auto;\n  overflow: hidden;\n  transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n}\n.wizard-card .picture:hover {\n  border-color: #2ca8ff;\n}\n.wizard-card[data-color=\"purple\"] .moving-tab {\n  position: absolute;\n  text-align: center;\n  padding: 12px;\n  font-size: 12px;\n  text-transform: uppercase;\n  -webkit-font-smoothing: subpixel-antialiased;\n  background-color: #9c27b0;\n  top: -4px;\n  left: 0px;\n  border-radius: 4px;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-weight: 500;\n  box-shadow: 0 16px 26px -10px rgba(156, 39, 176, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2);\n}\n.wizard-card[data-color=\"purple\"] .picture:hover {\n  border-color: #9c27b0;\n}\n.wizard-card[data-color=\"purple\"] .choice:hover .icon, .wizard-card[data-color=\"purple\"] .choice.active .icon {\n  border-color: #9c27b0;\n  color: #9c27b0;\n}\n.wizard-card[data-color=\"purple\"] .form-group .form-control {\n  background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#D2D2D2, #D2D2D2);\n}\n.wizard-card[data-color=\"purple\"] .checkbox input[type=checkbox]:checked + .checkbox-material .check {\n  background-color: #9c27b0;\n}\n.wizard-card[data-color=\"purple\"] .radio input[type=radio]:checked ~ .check {\n  background-color: #9c27b0;\n}\n.wizard-card[data-color=\"purple\"] .radio input[type=radio]:checked ~ .circle {\n  border-color: #9c27b0;\n}\n.wizard-card[data-color=\"green\"] .moving-tab {\n  position: absolute;\n  text-align: center;\n  padding: 12px;\n  font-size: 12px;\n  text-transform: uppercase;\n  -webkit-font-smoothing: subpixel-antialiased;\n  background-color: #4caf50;\n  top: -4px;\n  left: 0px;\n  border-radius: 4px;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-weight: 500;\n  box-shadow: 0 16px 26px -10px rgba(76, 175, 80, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(76, 175, 80, 0.2);\n}\n.wizard-card[data-color=\"green\"] .picture:hover {\n  border-color: #4caf50;\n}\n.wizard-card[data-color=\"green\"] .choice:hover .icon, .wizard-card[data-color=\"green\"] .choice.active .icon {\n  border-color: #4caf50;\n  color: #4caf50;\n}\n.wizard-card[data-color=\"green\"] .form-group .form-control {\n  background-image: linear-gradient(#4caf50, #4caf50), linear-gradient(#D2D2D2, #D2D2D2);\n}\n.wizard-card[data-color=\"green\"] .checkbox input[type=checkbox]:checked + .checkbox-material .check {\n  background-color: #4caf50;\n}\n.wizard-card[data-color=\"green\"] .radio input[type=radio]:checked ~ .check {\n  background-color: #4caf50;\n}\n.wizard-card[data-color=\"green\"] .radio input[type=radio]:checked ~ .circle {\n  border-color: #4caf50;\n}\n.wizard-card[data-color=\"blue\"] .moving-tab {\n  position: absolute;\n  text-align: center;\n  padding: 12px;\n  font-size: 12px;\n  text-transform: uppercase;\n  -webkit-font-smoothing: subpixel-antialiased;\n  background-color: #00bcd4;\n  top: -4px;\n  left: 0px;\n  border-radius: 4px;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-weight: 500;\n  box-shadow: 0 16px 26px -10px rgba(0, 188, 212, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 188, 212, 0.2);\n}\n.wizard-card[data-color=\"blue\"] .picture:hover {\n  border-color: #00bcd4;\n}\n.wizard-card[data-color=\"blue\"] .choice:hover .icon, .wizard-card[data-color=\"blue\"] .choice.active .icon {\n  border-color: #00bcd4;\n  color: #00bcd4;\n}\n.wizard-card[data-color=\"blue\"] .form-group .form-control {\n  background-image: linear-gradient(#00bcd4, #00bcd4), linear-gradient(#D2D2D2, #D2D2D2);\n}\n.wizard-card[data-color=\"blue\"] .checkbox input[type=checkbox]:checked + .checkbox-material .check {\n  background-color: #00bcd4;\n}\n.wizard-card[data-color=\"blue\"] .radio input[type=radio]:checked ~ .check {\n  background-color: #00bcd4;\n}\n.wizard-card[data-color=\"blue\"] .radio input[type=radio]:checked ~ .circle {\n  border-color: #00bcd4;\n}\n.wizard-card[data-color=\"orange\"] .moving-tab {\n  position: absolute;\n  text-align: center;\n  padding: 12px;\n  font-size: 12px;\n  text-transform: uppercase;\n  -webkit-font-smoothing: subpixel-antialiased;\n  background-color: #ff9800;\n  top: -4px;\n  left: 0px;\n  border-radius: 4px;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-weight: 500;\n  box-shadow: 0 16px 26px -10px rgba(255, 152, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(255, 152, 0, 0.2);\n}\n.wizard-card[data-color=\"orange\"] .picture:hover {\n  border-color: #ff9800;\n}\n.wizard-card[data-color=\"orange\"] .choice:hover .icon, .wizard-card[data-color=\"orange\"] .choice.active .icon {\n  border-color: #ff9800;\n  color: #ff9800;\n}\n.wizard-card[data-color=\"orange\"] .form-group .form-control {\n  background-image: linear-gradient(#ff9800, #ff9800), linear-gradient(#D2D2D2, #D2D2D2);\n}\n.wizard-card[data-color=\"orange\"] .checkbox input[type=checkbox]:checked + .checkbox-material .check {\n  background-color: #ff9800;\n}\n.wizard-card[data-color=\"orange\"] .radio input[type=radio]:checked ~ .check {\n  background-color: #ff9800;\n}\n.wizard-card[data-color=\"orange\"] .radio input[type=radio]:checked ~ .circle {\n  border-color: #ff9800;\n}\n.wizard-card[data-color=\"red\"] .moving-tab {\n  position: absolute;\n  text-align: center;\n  padding: 12px;\n  font-size: 12px;\n  text-transform: uppercase;\n  -webkit-font-smoothing: subpixel-antialiased;\n  background-color: #f44336;\n  top: -4px;\n  left: 0px;\n  border-radius: 4px;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-weight: 500;\n  box-shadow: 0 16px 26px -10px rgba(244, 67, 54, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(244, 67, 54, 0.2);\n}\n.wizard-card[data-color=\"red\"] .picture:hover {\n  border-color: #f44336;\n}\n.wizard-card[data-color=\"red\"] .choice:hover .icon, .wizard-card[data-color=\"red\"] .choice.active .icon {\n  border-color: #f44336;\n  color: #f44336;\n}\n.wizard-card[data-color=\"red\"] .form-group .form-control {\n  background-image: linear-gradient(#f44336, #f44336), linear-gradient(#D2D2D2, #D2D2D2);\n}\n.wizard-card[data-color=\"red\"] .checkbox input[type=checkbox]:checked + .checkbox-material .check {\n  background-color: #f44336;\n}\n.wizard-card[data-color=\"red\"] .radio input[type=radio]:checked ~ .check {\n  background-color: #f44336;\n}\n.wizard-card[data-color=\"red\"] .radio input[type=radio]:checked ~ .circle {\n  border-color: #f44336;\n}\n.wizard-card .picture input[type=\"file\"] {\n  cursor: pointer;\n  display: block;\n  height: 100%;\n  left: 0;\n  opacity: 0 !important;\n  position: absolute;\n  top: 0;\n  width: 100%;\n}\n.wizard-card .picture-src {\n  width: 100%;\n}\n.wizard-card .tab-content {\n  min-height: 340px;\n  padding: 20px 15px;\n}\n.wizard-card .wizard-footer {\n  padding: 0 15px;\n}\n.wizard-card .wizard-footer .checkbox {\n  margin-top: 16px;\n}\n.wizard-card .disabled {\n  display: none;\n}\n.wizard-card .wizard-header {\n  text-align: center;\n  padding: 25px 0 35px;\n}\n.wizard-card .wizard-header h5 {\n  margin: 5px 0 0;\n}\n.wizard-card .nav-pills > li {\n  text-align: center;\n}\n.wizard-card .btn {\n  text-transform: uppercase;\n}\n.wizard-card .info-text {\n  text-align: center;\n  font-weight: 300;\n  margin: 10px 0 30px;\n}\n.wizard-card .choice {\n  text-align: center;\n  cursor: pointer;\n  margin-top: 20px;\n}\n.wizard-card .choice .icon {\n  text-align: center;\n  vertical-align: middle;\n  height: 116px;\n  width: 116px;\n  border-radius: 50%;\n  color: #999999;\n  margin: 0 auto 20px;\n  border: 4px solid #CCCCCC;\n  transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n}\n.wizard-card .choice i {\n  font-size: 40px;\n  line-height: 111px;\n}\n.wizard-card .choice:hover .icon, .wizard-card .choice.active .icon {\n  border-color: #2ca8ff;\n}\n.wizard-card .choice input[type=\"radio\"],\n.wizard-card .choice input[type=\"checkbox\"] {\n  position: absolute;\n  left: -10000px;\n  z-index: -1;\n}\n.wizard-card .btn-finish {\n  display: none;\n}\n.wizard-card .description {\n  color: #999999;\n  font-size: 14px;\n}\n.wizard-card .wizard-title {\n  margin: 0;\n}\n\nlegend {\n  margin-bottom: 20px;\n  font-size: 21px;\n}\n\noutput {\n  padding-top: 8px;\n  font-size: 14px;\n  line-height: 1.42857;\n}\n\n.form-control {\n  height: 36px;\n  padding: 7px 0;\n  font-size: 14px;\n  line-height: 1.42857;\n}\n\n@media screen and (-webkit-min-device-pixel-ratio: 0) {\n  input[type=\"date\"].form-control,\n  input[type=\"time\"].form-control,\n  input[type=\"datetime-local\"].form-control,\n  input[type=\"month\"].form-control {\n    line-height: 36px;\n  }\n  input[type=\"date\"].input-sm, .input-group-sm input[type=\"date\"],\n  input[type=\"time\"].input-sm, .input-group-sm\n  input[type=\"time\"],\n  input[type=\"datetime-local\"].input-sm, .input-group-sm\n  input[type=\"datetime-local\"],\n  input[type=\"month\"].input-sm, .input-group-sm\n  input[type=\"month\"] {\n    line-height: 24px;\n  }\n  input[type=\"date\"].input-lg, .input-group-lg input[type=\"date\"],\n  input[type=\"time\"].input-lg, .input-group-lg\n  input[type=\"time\"],\n  input[type=\"datetime-local\"].input-lg, .input-group-lg\n  input[type=\"datetime-local\"],\n  input[type=\"month\"].input-lg, .input-group-lg\n  input[type=\"month\"] {\n    line-height: 44px;\n  }\n}\n.radio label,\n.checkbox label {\n  min-height: 20px;\n}\n\n.form-control-static {\n  padding-top: 8px;\n  padding-bottom: 8px;\n  min-height: 34px;\n}\n\n.input-sm .input-sm {\n  height: 24px;\n  padding: 3px 0;\n  font-size: 11px;\n  line-height: 1.5;\n  border-radius: 0;\n}\n.input-sm select.input-sm {\n  height: 24px;\n  line-height: 24px;\n}\n.input-sm textarea.input-sm,\n.input-sm select[multiple].input-sm {\n  height: auto;\n}\n\n.form-group-sm .form-control {\n  height: 24px;\n  padding: 3px 0;\n  font-size: 11px;\n  line-height: 1.5;\n}\n.form-group-sm select.form-control {\n  height: 24px;\n  line-height: 24px;\n}\n.form-group-sm textarea.form-control,\n.form-group-sm select[multiple].form-control {\n  height: auto;\n}\n.form-group-sm .form-control-static {\n  height: 24px;\n  min-height: 31px;\n  padding: 4px 0;\n  font-size: 11px;\n  line-height: 1.5;\n}\n\n.input-lg .input-lg {\n  height: 44px;\n  padding: 9px 0;\n  font-size: 18px;\n  line-height: 1.33333;\n  border-radius: 0;\n}\n.input-lg select.input-lg {\n  height: 44px;\n  line-height: 44px;\n}\n.input-lg textarea.input-lg,\n.input-lg select[multiple].input-lg {\n  height: auto;\n}\n\n.form-group-lg .form-control {\n  height: 44px;\n  padding: 9px 0;\n  font-size: 18px;\n  line-height: 1.33333;\n}\n.form-group-lg select.form-control {\n  height: 44px;\n  line-height: 44px;\n}\n.form-group-lg textarea.form-control,\n.form-group-lg select[multiple].form-control {\n  height: auto;\n}\n.form-group-lg .form-control-static {\n  height: 44px;\n  min-height: 38px;\n  padding: 10px 0;\n  font-size: 18px;\n  line-height: 1.33333;\n}\n\n.form-horizontal .radio,\n.form-horizontal .checkbox,\n.form-horizontal .radio-inline,\n.form-horizontal .checkbox-inline {\n  padding-top: 8px;\n}\n.form-horizontal .radio,\n.form-horizontal .checkbox {\n  min-height: 28px;\n}\n@media (min-width: 768px) {\n  .form-horizontal .control-label {\n    padding-top: 8px;\n  }\n}\n@media (min-width: 768px) {\n  .form-horizontal .form-group-lg .control-label {\n    padding-top: 13.0px;\n    font-size: 18px;\n  }\n}\n@media (min-width: 768px) {\n  .form-horizontal .form-group-sm .control-label {\n    padding-top: 4px;\n    font-size: 11px;\n  }\n}\n\n.label {\n  border-radius: 3px;\n}\n.label, .label.label-default {\n  background-color: #FFFFFF;\n}\n.label.label-inverse {\n  background-color: #212121;\n}\n.label.label-primary {\n  background-color: #9c27b0;\n}\n.label.label-success {\n  background-color: #4caf50;\n}\n.label.label-info {\n  background-color: #00bcd4;\n}\n.label.label-warning {\n  background-color: #ff9800;\n}\n.label.label-danger {\n  background-color: #f44336;\n}\n.label.label-rose {\n  background-color: #e91e63;\n}\n\n.form-control,\n.form-group .form-control {\n  border: 0;\n  background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#D2D2D2, #D2D2D2);\n  background-size: 0 2px, 100% 1px;\n  background-repeat: no-repeat;\n  background-position: center bottom, center calc(100% - 1px);\n  background-color: transparent;\n  transition: background 0s ease-out;\n  float: none;\n  box-shadow: none;\n  border-radius: 0;\n  font-weight: 400;\n}\n.form-control::-moz-placeholder,\n.form-group .form-control::-moz-placeholder {\n  color: #AAAAAA;\n  font-weight: 400;\n}\n.form-control:-ms-input-placeholder,\n.form-group .form-control:-ms-input-placeholder {\n  color: #AAAAAA;\n  font-weight: 400;\n}\n.form-control::-webkit-input-placeholder,\n.form-group .form-control::-webkit-input-placeholder {\n  color: #AAAAAA;\n  font-weight: 400;\n}\n.form-control[readonly], .form-control[disabled], fieldset[disabled] .form-control,\n.form-group .form-control[readonly],\n.form-group .form-control[disabled], fieldset[disabled]\n.form-group .form-control {\n  background-color: transparent;\n}\n.form-control[disabled], fieldset[disabled] .form-control,\n.form-group .form-control[disabled], fieldset[disabled]\n.form-group .form-control {\n  background-image: none;\n  border-bottom: 1px dotted #D2D2D2;\n}\n\n.form-group {\n  position: relative;\n}\n.form-group.label-static label.control-label, .form-group.label-placeholder label.control-label, .form-group.label-floating label.control-label {\n  position: absolute;\n  pointer-events: none;\n  transition: 0.3s ease all;\n}\n.form-group.label-floating label.control-label {\n  will-change: left, top, contents;\n}\n.form-group.label-placeholder:not(.is-empty) label.control-label {\n  display: none;\n}\n.form-group .help-block {\n  position: absolute;\n  display: none;\n}\n.form-group.is-focused .form-control {\n  outline: none;\n  background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#D2D2D2, #D2D2D2);\n  background-size: 100% 2px, 100% 1px;\n  box-shadow: none;\n  transition-duration: 0.3s;\n}\n.form-group.is-focused .form-control .material-input:after {\n  background-color: #9c27b0;\n}\n.form-group.is-focused.form-info .form-control {\n  background-image: linear-gradient(#00bcd4, #00bcd4), linear-gradient(#D2D2D2, #D2D2D2);\n}\n.form-group.is-focused.form-success .form-control {\n  background-image: linear-gradient(#4caf50, #4caf50), linear-gradient(#D2D2D2, #D2D2D2);\n}\n.form-group.is-focused.form-warning .form-control {\n  background-image: linear-gradient(#ff9800, #ff9800), linear-gradient(#D2D2D2, #D2D2D2);\n}\n.form-group.is-focused.form-danger .form-control {\n  background-image: linear-gradient(#f44336, #f44336), linear-gradient(#D2D2D2, #D2D2D2);\n}\n.form-group.is-focused.form-rose .form-control {\n  background-image: linear-gradient(#e91e63, #e91e63), linear-gradient(#D2D2D2, #D2D2D2);\n}\n.form-group.is-focused.form-white .form-control {\n  background-image: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(#D2D2D2, #D2D2D2);\n}\n.form-group.is-focused.label-placeholder label,\n.form-group.is-focused.label-placeholder label.control-label {\n  color: #AAAAAA;\n}\n.form-group.is-focused .help-block {\n  display: block;\n}\n.form-group.has-warning .form-control {\n  box-shadow: none;\n}\n.form-group.has-warning.is-focused .form-control {\n  background-image: linear-gradient(#ff9800, #ff9800), linear-gradient(#D2D2D2, #D2D2D2);\n}\n.form-group.has-warning label.control-label,\n.form-group.has-warning .help-block {\n  color: #ff9800;\n}\n.form-group.has-error .form-control {\n  box-shadow: none;\n}\n.form-group.has-error.is-focused .form-control {\n  background-image: linear-gradient(#f44336, #f44336), linear-gradient(#D2D2D2, #D2D2D2);\n}\n.form-group.has-error label.control-label,\n.form-group.has-error .help-block {\n  color: #f44336;\n}\n.form-group.has-success .form-control {\n  box-shadow: none;\n}\n.form-group.has-success.is-focused .form-control {\n  background-image: linear-gradient(#4caf50, #4caf50), linear-gradient(#D2D2D2, #D2D2D2);\n}\n.form-group.has-success label.control-label,\n.form-group.has-success .help-block {\n  color: #4caf50;\n}\n.form-group.has-info .form-control {\n  box-shadow: none;\n}\n.form-group.has-info.is-focused .form-control {\n  background-image: linear-gradient(#00bcd4, #00bcd4), linear-gradient(#D2D2D2, #D2D2D2);\n}\n.form-group.has-info label.control-label,\n.form-group.has-info .help-block {\n  color: #00bcd4;\n}\n.form-group textarea {\n  resize: none;\n}\n.form-group textarea ~ .form-control-highlight {\n  margin-top: -11px;\n}\n.form-group select {\n  appearance: none;\n}\n.form-group select ~ .material-input:after {\n  display: none;\n}\n\n.form-control {\n  margin-bottom: 7px;\n}\n.form-control::-moz-placeholder {\n  font-size: 14px;\n  line-height: 1.42857;\n  color: #AAAAAA;\n  font-weight: 400;\n}\n.form-control:-ms-input-placeholder {\n  font-size: 14px;\n  line-height: 1.42857;\n  color: #AAAAAA;\n  font-weight: 400;\n}\n.form-control::-webkit-input-placeholder {\n  font-size: 14px;\n  line-height: 1.42857;\n  color: #AAAAAA;\n  font-weight: 400;\n}\n\n.checkbox label,\n.radio label,\nlabel {\n  font-size: 14px;\n  line-height: 1.42857;\n  color: #AAAAAA;\n  font-weight: 400;\n}\n\nlabel.control-label {\n  font-size: 11px;\n  line-height: 1.07143;\n  color: #AAAAAA;\n  font-weight: 400;\n  margin: 16px 0 0 0;\n}\n\n.help-block {\n  margin-top: 0;\n  font-size: 11px;\n}\n\n.form-group {\n  padding-bottom: 7px;\n  margin: 27px 0 0 0;\n}\n.form-group .form-control {\n  margin-bottom: 7px;\n}\n.form-group .form-control::-moz-placeholder {\n  font-size: 14px;\n  line-height: 1.42857;\n  color: #AAAAAA;\n  font-weight: 400;\n}\n.form-group .form-control:-ms-input-placeholder {\n  font-size: 14px;\n  line-height: 1.42857;\n  color: #AAAAAA;\n  font-weight: 400;\n}\n.form-group .form-control::-webkit-input-placeholder {\n  font-size: 14px;\n  line-height: 1.42857;\n  color: #AAAAAA;\n  font-weight: 400;\n}\n.form-group .checkbox label,\n.form-group .radio label,\n.form-group label {\n  font-size: 14px;\n  line-height: 1.42857;\n  color: #AAAAAA;\n  font-weight: 400;\n}\n.form-group label.control-label {\n  font-size: 11px;\n  line-height: 1.07143;\n  color: #AAAAAA;\n  font-weight: 400;\n  margin: 16px 0 0 0;\n}\n.form-group .help-block {\n  margin-top: 0;\n  font-size: 11px;\n}\n.form-group.label-floating label.control-label, .form-group.label-placeholder label.control-label {\n  top: -7px;\n  font-size: 14px;\n  line-height: 1.42857;\n}\n.form-group.label-static label.control-label, .form-group.label-floating.is-focused label.control-label, .form-group.label-floating:not(.is-empty) label.control-label {\n  top: -28px;\n  left: 0;\n  font-size: 11px;\n  line-height: 1.07143;\n}\n.form-group.label-floating input.form-control:-webkit-autofill ~ label.control-label label.control-label {\n  top: -28px;\n  left: 0;\n  font-size: 11px;\n  line-height: 1.07143;\n}\n\n.form-group.form-group-sm {\n  padding-bottom: 3px;\n  margin: 21px 0 0 0;\n}\n.form-group.form-group-sm .form-control {\n  margin-bottom: 3px;\n}\n.form-group.form-group-sm .form-control::-moz-placeholder {\n  font-size: 11px;\n  line-height: 1.5;\n  color: #AAAAAA;\n  font-weight: 400;\n}\n.form-group.form-group-sm .form-control:-ms-input-placeholder {\n  font-size: 11px;\n  line-height: 1.5;\n  color: #AAAAAA;\n  font-weight: 400;\n}\n.form-group.form-group-sm .form-control::-webkit-input-placeholder {\n  font-size: 11px;\n  line-height: 1.5;\n  color: #AAAAAA;\n  font-weight: 400;\n}\n.form-group.form-group-sm .checkbox label,\n.form-group.form-group-sm .radio label,\n.form-group.form-group-sm label {\n  font-size: 11px;\n  line-height: 1.5;\n  color: #AAAAAA;\n  font-weight: 400;\n}\n.form-group.form-group-sm label.control-label {\n  font-size: 9px;\n  line-height: 1.125;\n  color: #AAAAAA;\n  font-weight: 400;\n  margin: 16px 0 0 0;\n}\n.form-group.form-group-sm .help-block {\n  margin-top: 0;\n  font-size: 9px;\n}\n.form-group.form-group-sm.label-floating label.control-label, .form-group.form-group-sm.label-placeholder label.control-label {\n  top: -11px;\n  font-size: 11px;\n  line-height: 1.5;\n}\n.form-group.form-group-sm.label-static label.control-label, .form-group.form-group-sm.label-floating.is-focused label.control-label, .form-group.form-group-sm.label-floating:not(.is-empty) label.control-label {\n  top: -25px;\n  left: 0;\n  font-size: 9px;\n  line-height: 1.125;\n}\n.form-group.form-group-sm.label-floating input.form-control:-webkit-autofill ~ label.control-label label.control-label {\n  top: -25px;\n  left: 0;\n  font-size: 9px;\n  line-height: 1.125;\n}\n\n.form-group.form-group-lg {\n  padding-bottom: 9px;\n  margin: 30px 0 0 0;\n}\n.form-group.form-group-lg .form-control {\n  margin-bottom: 9px;\n}\n.form-group.form-group-lg .form-control::-moz-placeholder {\n  font-size: 18px;\n  line-height: 1.33333;\n  color: #AAAAAA;\n  font-weight: 400;\n}\n.form-group.form-group-lg .form-control:-ms-input-placeholder {\n  font-size: 18px;\n  line-height: 1.33333;\n  color: #AAAAAA;\n  font-weight: 400;\n}\n.form-group.form-group-lg .form-control::-webkit-input-placeholder {\n  font-size: 18px;\n  line-height: 1.33333;\n  color: #AAAAAA;\n  font-weight: 400;\n}\n.form-group.form-group-lg .checkbox label,\n.form-group.form-group-lg .radio label,\n.form-group.form-group-lg label {\n  font-size: 18px;\n  line-height: 1.33333;\n  color: #AAAAAA;\n  font-weight: 400;\n}\n.form-group.form-group-lg label.control-label {\n  font-size: 14px;\n  line-height: 1.0;\n  color: #AAAAAA;\n  font-weight: 400;\n  margin: 16px 0 0 0;\n}\n.form-group.form-group-lg .help-block {\n  margin-top: 0;\n  font-size: 14px;\n}\n.form-group.form-group-lg.label-floating label.control-label, .form-group.form-group-lg.label-placeholder label.control-label {\n  top: -5px;\n  font-size: 18px;\n  line-height: 1.33333;\n}\n.form-group.form-group-lg.label-static label.control-label, .form-group.form-group-lg.label-floating.is-focused label.control-label, .form-group.form-group-lg.label-floating:not(.is-empty) label.control-label {\n  top: -32px;\n  left: 0;\n  font-size: 14px;\n  line-height: 1.0;\n}\n.form-group.form-group-lg.label-floating input.form-control:-webkit-autofill ~ label.control-label label.control-label {\n  top: -32px;\n  left: 0;\n  font-size: 14px;\n  line-height: 1.0;\n}\n\nselect.form-control {\n  border: 0;\n  box-shadow: none;\n  border-radius: 0;\n}\n.form-group.is-focused select.form-control {\n  box-shadow: none;\n  border-color: #D2D2D2;\n}\nselect.form-control[multiple], .form-group.is-focused select.form-control[multiple] {\n  height: 85px;\n}\n\n.input-group-btn .btn {\n  margin: 0 0 7px 0;\n}\n\n.form-group.form-group-sm .input-group-btn .btn {\n  margin: 0 0 3px 0;\n}\n.form-group.form-group-lg .input-group-btn .btn {\n  margin: 0 0 9px 0;\n}\n\n.input-group .input-group-btn {\n  padding: 0 12px;\n}\n.input-group .input-group-addon {\n  border: 0;\n  background: transparent;\n  padding: 6px 15px 0px;\n}\n\n.form-group input[type=file] {\n  opacity: 0;\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 100;\n}\n\n.form-control-feedback {\n  opacity: 0;\n}\n.has-success .form-control-feedback {\n  color: #4caf50;\n  opacity: 1;\n}\n.has-error .form-control-feedback {\n  color: #f44336;\n  opacity: 1;\n}\n\n.btn {\n  border: none;\n  border-radius: 3px;\n  position: relative;\n  padding: 12px 30px;\n  margin: 10px 1px;\n  font-size: 12px;\n  font-weight: 400;\n  text-transform: uppercase;\n  letter-spacing: 0;\n  will-change: box-shadow, transform;\n  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n}\n.btn::-moz-focus-inner {\n  border: 0;\n}\n.btn, .btn.btn-default {\n  box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12);\n}\n.btn, .btn:hover, .btn:focus, .btn:active, .btn.active, .btn:active:focus, .btn:active:hover, .btn.active:focus, .btn.active:hover, .open > .btn.dropdown-toggle, .open > .btn.dropdown-toggle:focus, .open > .btn.dropdown-toggle:hover, .btn.btn-default, .btn.btn-default:hover, .btn.btn-default:focus, .btn.btn-default:active, .btn.btn-default.active, .btn.btn-default:active:focus, .btn.btn-default:active:hover, .btn.btn-default.active:focus, .btn.btn-default.active:hover, .open > .btn.btn-default.dropdown-toggle, .open > .btn.btn-default.dropdown-toggle:focus, .open > .btn.btn-default.dropdown-toggle:hover {\n  background-color: #999999;\n  color: #FFFFFF;\n}\n.btn:focus, .btn:active, .btn:hover, .btn.btn-default:focus, .btn.btn-default:active, .btn.btn-default:hover {\n  box-shadow: 0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2);\n}\n.btn.disabled, .btn.disabled:hover, .btn.disabled:focus, .btn.disabled.focus, .btn.disabled:active, .btn.disabled.active, .btn:disabled, .btn:disabled:hover, .btn:disabled:focus, .btn:disabled.focus, .btn:disabled:active, .btn:disabled.active, .btn[disabled], .btn[disabled]:hover, .btn[disabled]:focus, .btn[disabled].focus, .btn[disabled]:active, .btn[disabled].active, fieldset[disabled] .btn, fieldset[disabled] .btn:hover, fieldset[disabled] .btn:focus, fieldset[disabled] .btn.focus, fieldset[disabled] .btn:active, fieldset[disabled] .btn.active, .btn.btn-default.disabled, .btn.btn-default.disabled:hover, .btn.btn-default.disabled:focus, .btn.btn-default.disabled.focus, .btn.btn-default.disabled:active, .btn.btn-default.disabled.active, .btn.btn-default:disabled, .btn.btn-default:disabled:hover, .btn.btn-default:disabled:focus, .btn.btn-default:disabled.focus, .btn.btn-default:disabled:active, .btn.btn-default:disabled.active, .btn.btn-default[disabled], .btn.btn-default[disabled]:hover, .btn.btn-default[disabled]:focus, .btn.btn-default[disabled].focus, .btn.btn-default[disabled]:active, .btn.btn-default[disabled].active, fieldset[disabled] .btn.btn-default, fieldset[disabled] .btn.btn-default:hover, fieldset[disabled] .btn.btn-default:focus, fieldset[disabled] .btn.btn-default.focus, fieldset[disabled] .btn.btn-default:active, fieldset[disabled] .btn.btn-default.active {\n  box-shadow: none;\n}\n.btn.btn-simple, .btn.btn-default.btn-simple {\n  background-color: transparent;\n  color: #999999;\n  box-shadow: none;\n}\n.btn.btn-simple:hover, .btn.btn-simple:focus, .btn.btn-simple:active, .btn.btn-default.btn-simple:hover, .btn.btn-default.btn-simple:focus, .btn.btn-default.btn-simple:active {\n  background-color: transparent;\n  color: #999999;\n}\n.btn.btn-primary {\n  box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);\n}\n.btn.btn-primary, .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary.active, .btn.btn-primary:active:focus, .btn.btn-primary:active:hover, .btn.btn-primary.active:focus, .btn.btn-primary.active:hover, .open > .btn.btn-primary.dropdown-toggle, .open > .btn.btn-primary.dropdown-toggle:focus, .open > .btn.btn-primary.dropdown-toggle:hover {\n  background-color: #9c27b0;\n  color: #FFFFFF;\n}\n.btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary:hover {\n  box-shadow: 0 14px 26px -12px rgba(156, 39, 176, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2);\n}\n.btn.btn-primary.disabled, .btn.btn-primary.disabled:hover, .btn.btn-primary.disabled:focus, .btn.btn-primary.disabled.focus, .btn.btn-primary.disabled:active, .btn.btn-primary.disabled.active, .btn.btn-primary:disabled, .btn.btn-primary:disabled:hover, .btn.btn-primary:disabled:focus, .btn.btn-primary:disabled.focus, .btn.btn-primary:disabled:active, .btn.btn-primary:disabled.active, .btn.btn-primary[disabled], .btn.btn-primary[disabled]:hover, .btn.btn-primary[disabled]:focus, .btn.btn-primary[disabled].focus, .btn.btn-primary[disabled]:active, .btn.btn-primary[disabled].active, fieldset[disabled] .btn.btn-primary, fieldset[disabled] .btn.btn-primary:hover, fieldset[disabled] .btn.btn-primary:focus, fieldset[disabled] .btn.btn-primary.focus, fieldset[disabled] .btn.btn-primary:active, fieldset[disabled] .btn.btn-primary.active {\n  box-shadow: none;\n}\n.btn.btn-primary.btn-simple {\n  background-color: transparent;\n  color: #9c27b0;\n  box-shadow: none;\n}\n.btn.btn-primary.btn-simple:hover, .btn.btn-primary.btn-simple:focus, .btn.btn-primary.btn-simple:active {\n  background-color: transparent;\n  color: #9c27b0;\n}\n.btn.btn-info {\n  box-shadow: 0 2px 2px 0 rgba(0, 188, 212, 0.14), 0 3px 1px -2px rgba(0, 188, 212, 0.2), 0 1px 5px 0 rgba(0, 188, 212, 0.12);\n}\n.btn.btn-info, .btn.btn-info:hover, .btn.btn-info:focus, .btn.btn-info:active, .btn.btn-info.active, .btn.btn-info:active:focus, .btn.btn-info:active:hover, .btn.btn-info.active:focus, .btn.btn-info.active:hover, .open > .btn.btn-info.dropdown-toggle, .open > .btn.btn-info.dropdown-toggle:focus, .open > .btn.btn-info.dropdown-toggle:hover {\n  background-color: #00bcd4;\n  color: #FFFFFF;\n}\n.btn.btn-info:focus, .btn.btn-info:active, .btn.btn-info:hover {\n  box-shadow: 0 14px 26px -12px rgba(0, 188, 212, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 188, 212, 0.2);\n}\n.btn.btn-info.disabled, .btn.btn-info.disabled:hover, .btn.btn-info.disabled:focus, .btn.btn-info.disabled.focus, .btn.btn-info.disabled:active, .btn.btn-info.disabled.active, .btn.btn-info:disabled, .btn.btn-info:disabled:hover, .btn.btn-info:disabled:focus, .btn.btn-info:disabled.focus, .btn.btn-info:disabled:active, .btn.btn-info:disabled.active, .btn.btn-info[disabled], .btn.btn-info[disabled]:hover, .btn.btn-info[disabled]:focus, .btn.btn-info[disabled].focus, .btn.btn-info[disabled]:active, .btn.btn-info[disabled].active, fieldset[disabled] .btn.btn-info, fieldset[disabled] .btn.btn-info:hover, fieldset[disabled] .btn.btn-info:focus, fieldset[disabled] .btn.btn-info.focus, fieldset[disabled] .btn.btn-info:active, fieldset[disabled] .btn.btn-info.active {\n  box-shadow: none;\n}\n.btn.btn-info.btn-simple {\n  background-color: transparent;\n  color: #00bcd4;\n  box-shadow: none;\n}\n.btn.btn-info.btn-simple:hover, .btn.btn-info.btn-simple:focus, .btn.btn-info.btn-simple:active {\n  background-color: transparent;\n  color: #00bcd4;\n}\n.btn.btn-success {\n  box-shadow: 0 2px 2px 0 rgba(76, 175, 80, 0.14), 0 3px 1px -2px rgba(76, 175, 80, 0.2), 0 1px 5px 0 rgba(76, 175, 80, 0.12);\n}\n.btn.btn-success, .btn.btn-success:hover, .btn.btn-success:focus, .btn.btn-success:active, .btn.btn-success.active, .btn.btn-success:active:focus, .btn.btn-success:active:hover, .btn.btn-success.active:focus, .btn.btn-success.active:hover, .open > .btn.btn-success.dropdown-toggle, .open > .btn.btn-success.dropdown-toggle:focus, .open > .btn.btn-success.dropdown-toggle:hover {\n  background-color: #4caf50;\n  color: #FFFFFF;\n}\n.btn.btn-success:focus, .btn.btn-success:active, .btn.btn-success:hover {\n  box-shadow: 0 14px 26px -12px rgba(76, 175, 80, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(76, 175, 80, 0.2);\n}\n.btn.btn-success.disabled, .btn.btn-success.disabled:hover, .btn.btn-success.disabled:focus, .btn.btn-success.disabled.focus, .btn.btn-success.disabled:active, .btn.btn-success.disabled.active, .btn.btn-success:disabled, .btn.btn-success:disabled:hover, .btn.btn-success:disabled:focus, .btn.btn-success:disabled.focus, .btn.btn-success:disabled:active, .btn.btn-success:disabled.active, .btn.btn-success[disabled], .btn.btn-success[disabled]:hover, .btn.btn-success[disabled]:focus, .btn.btn-success[disabled].focus, .btn.btn-success[disabled]:active, .btn.btn-success[disabled].active, fieldset[disabled] .btn.btn-success, fieldset[disabled] .btn.btn-success:hover, fieldset[disabled] .btn.btn-success:focus, fieldset[disabled] .btn.btn-success.focus, fieldset[disabled] .btn.btn-success:active, fieldset[disabled] .btn.btn-success.active {\n  box-shadow: none;\n}\n.btn.btn-success.btn-simple {\n  background-color: transparent;\n  color: #4caf50;\n  box-shadow: none;\n}\n.btn.btn-success.btn-simple:hover, .btn.btn-success.btn-simple:focus, .btn.btn-success.btn-simple:active {\n  background-color: transparent;\n  color: #4caf50;\n}\n.btn.btn-warning {\n  box-shadow: 0 2px 2px 0 rgba(255, 152, 0, 0.14), 0 3px 1px -2px rgba(255, 152, 0, 0.2), 0 1px 5px 0 rgba(255, 152, 0, 0.12);\n}\n.btn.btn-warning, .btn.btn-warning:hover, .btn.btn-warning:focus, .btn.btn-warning:active, .btn.btn-warning.active, .btn.btn-warning:active:focus, .btn.btn-warning:active:hover, .btn.btn-warning.active:focus, .btn.btn-warning.active:hover, .open > .btn.btn-warning.dropdown-toggle, .open > .btn.btn-warning.dropdown-toggle:focus, .open > .btn.btn-warning.dropdown-toggle:hover {\n  background-color: #ff9800;\n  color: #FFFFFF;\n}\n.btn.btn-warning:focus, .btn.btn-warning:active, .btn.btn-warning:hover {\n  box-shadow: 0 14px 26px -12px rgba(255, 152, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(255, 152, 0, 0.2);\n}\n.btn.btn-warning.disabled, .btn.btn-warning.disabled:hover, .btn.btn-warning.disabled:focus, .btn.btn-warning.disabled.focus, .btn.btn-warning.disabled:active, .btn.btn-warning.disabled.active, .btn.btn-warning:disabled, .btn.btn-warning:disabled:hover, .btn.btn-warning:disabled:focus, .btn.btn-warning:disabled.focus, .btn.btn-warning:disabled:active, .btn.btn-warning:disabled.active, .btn.btn-warning[disabled], .btn.btn-warning[disabled]:hover, .btn.btn-warning[disabled]:focus, .btn.btn-warning[disabled].focus, .btn.btn-warning[disabled]:active, .btn.btn-warning[disabled].active, fieldset[disabled] .btn.btn-warning, fieldset[disabled] .btn.btn-warning:hover, fieldset[disabled] .btn.btn-warning:focus, fieldset[disabled] .btn.btn-warning.focus, fieldset[disabled] .btn.btn-warning:active, fieldset[disabled] .btn.btn-warning.active {\n  box-shadow: none;\n}\n.btn.btn-warning.btn-simple {\n  background-color: transparent;\n  color: #ff9800;\n  box-shadow: none;\n}\n.btn.btn-warning.btn-simple:hover, .btn.btn-warning.btn-simple:focus, .btn.btn-warning.btn-simple:active {\n  background-color: transparent;\n  color: #ff9800;\n}\n.btn.btn-danger {\n  box-shadow: 0 2px 2px 0 rgba(244, 67, 54, 0.14), 0 3px 1px -2px rgba(244, 67, 54, 0.2), 0 1px 5px 0 rgba(244, 67, 54, 0.12);\n}\n.btn.btn-danger, .btn.btn-danger:hover, .btn.btn-danger:focus, .btn.btn-danger:active, .btn.btn-danger.active, .btn.btn-danger:active:focus, .btn.btn-danger:active:hover, .btn.btn-danger.active:focus, .btn.btn-danger.active:hover, .open > .btn.btn-danger.dropdown-toggle, .open > .btn.btn-danger.dropdown-toggle:focus, .open > .btn.btn-danger.dropdown-toggle:hover {\n  background-color: #f44336;\n  color: #FFFFFF;\n}\n.btn.btn-danger:focus, .btn.btn-danger:active, .btn.btn-danger:hover {\n  box-shadow: 0 14px 26px -12px rgba(244, 67, 54, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(244, 67, 54, 0.2);\n}\n.btn.btn-danger.disabled, .btn.btn-danger.disabled:hover, .btn.btn-danger.disabled:focus, .btn.btn-danger.disabled.focus, .btn.btn-danger.disabled:active, .btn.btn-danger.disabled.active, .btn.btn-danger:disabled, .btn.btn-danger:disabled:hover, .btn.btn-danger:disabled:focus, .btn.btn-danger:disabled.focus, .btn.btn-danger:disabled:active, .btn.btn-danger:disabled.active, .btn.btn-danger[disabled], .btn.btn-danger[disabled]:hover, .btn.btn-danger[disabled]:focus, .btn.btn-danger[disabled].focus, .btn.btn-danger[disabled]:active, .btn.btn-danger[disabled].active, fieldset[disabled] .btn.btn-danger, fieldset[disabled] .btn.btn-danger:hover, fieldset[disabled] .btn.btn-danger:focus, fieldset[disabled] .btn.btn-danger.focus, fieldset[disabled] .btn.btn-danger:active, fieldset[disabled] .btn.btn-danger.active {\n  box-shadow: none;\n}\n.btn.btn-danger.btn-simple {\n  background-color: transparent;\n  color: #f44336;\n  box-shadow: none;\n}\n.btn.btn-danger.btn-simple:hover, .btn.btn-danger.btn-simple:focus, .btn.btn-danger.btn-simple:active {\n  background-color: transparent;\n  color: #f44336;\n}\n.btn:focus, .btn:active, .btn:active:focus {\n  outline: 0;\n}\n.btn.btn-round {\n  border-radius: 30px;\n}\n.btn:not(.btn-just-icon):not(.btn-fab) .fa {\n  font-size: 18px;\n  margin-top: -2px;\n  position: relative;\n  top: 2px;\n}\n.btn.btn-fab {\n  border-radius: 50%;\n  font-size: 24px;\n  height: 56px;\n  margin: auto;\n  min-width: 56px;\n  width: 56px;\n  padding: 0;\n  overflow: hidden;\n  position: relative;\n  line-height: normal;\n}\n.btn.btn-fab .ripple-container {\n  border-radius: 50%;\n}\n.btn.btn-fab.btn-fab-mini, .btn-group-sm .btn.btn-fab {\n  height: 40px;\n  min-width: 40px;\n  width: 40px;\n}\n.btn.btn-fab.btn-fab-mini.material-icons, .btn-group-sm .btn.btn-fab.material-icons {\n  top: -3.5px;\n  left: -3.5px;\n}\n.btn.btn-fab.btn-fab-mini .material-icons, .btn-group-sm .btn.btn-fab .material-icons {\n  font-size: 17px;\n}\n.btn.btn-fab i.material-icons {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-12px, -12px);\n  line-height: 24px;\n  width: 24px;\n  font-size: 24px;\n}\n.btn.btn-lg, .btn-group-lg .btn {\n  font-size: 14px;\n  padding: 18px 36px;\n}\n.btn.btn-sm, .btn-group-sm .btn {\n  padding: 5px 20px;\n  font-size: 11px;\n}\n.btn.btn-xs, .btn-group-xs .btn {\n  padding: 4px 15px;\n  font-size: 10px;\n}\n.btn.btn-just-icon {\n  font-size: 18px;\n  padding: 10px 10px;\n  line-height: 1em;\n}\n.btn.btn-just-icon i {\n  width: 20px;\n}\n.btn.btn-just-icon.btn-lg {\n  font-size: 22px;\n  padding: 13px 18px;\n}\n\n.btn .material-icons {\n  vertical-align: middle;\n  font-size: 17px;\n  top: -1px;\n  position: relative;\n}\n\n/*            Navigation menu                */\n.nav-pills {\n  background-color: rgba(200, 200, 200, 0.2);\n}\n.nav-pills > li + li {\n  margin-left: 0;\n}\n.nav-pills > li > a {\n  border: 0 !important;\n  border-radius: 0;\n  line-height: 18px;\n  text-transform: uppercase;\n  font-size: 12px;\n  font-weight: 500;\n  min-width: 100px;\n  text-align: center;\n  color: #555555 !important;\n}\n.nav-pills > li.active > a,\n.nav-pills > li.active > a:hover,\n.nav-pills > li.active > a:focus,\n.nav-pills > li > a:hover,\n.nav-pills > li > a:focus {\n  background-color: inherit;\n}\n.nav-pills > li i {\n  display: block;\n  font-size: 30px;\n  padding: 15px 0;\n}\n\n.popover, .tooltip-inner {\n  color: #555555;\n  line-height: 1.5em;\n  background: #FFFFFF;\n  border: none;\n  border-radius: 3px;\n  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);\n}\n\n.popover {\n  padding: 0;\n  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);\n}\n.popover.left > .arrow, .popover.right > .arrow, .popover.top > .arrow, .popover.bottom > .arrow {\n  border: none;\n}\n\n.popover-title {\n  background-color: #FFFFFF;\n  border: none;\n  padding: 15px 15px 5px;\n  font-size: 1.3em;\n}\n\n.popover-content {\n  padding: 10px 15px 15px;\n  line-height: 1.4;\n}\n\n.tooltip.in {\n  opacity: 1;\n  -webkit-transform: translate3d(0, 0px, 0);\n  -moz-transform: translate3d(0, 0px, 0);\n  -o-transform: translate3d(0, 0px, 0);\n  -ms-transform: translate3d(0, 0px, 0);\n  transform: translate3d(0, 0px, 0);\n}\n\n.tooltip {\n  opacity: 0;\n  transition: opacity, transform .2s ease;\n  -webkit-transform: translate3d(0, 5px, 0);\n  -moz-transform: translate3d(0, 5px, 0);\n  -o-transform: translate3d(0, 5px, 0);\n  -ms-transform: translate3d(0, 5px, 0);\n  transform: translate3d(0, 5px, 0);\n}\n.tooltip.left .tooltip-arrow {\n  border-left-color: #FFFFFF;\n}\n.tooltip.right .tooltip-arrow {\n  border-right-color: #FFFFFF;\n}\n.tooltip.top .tooltip-arrow {\n  border-top-color: #FFFFFF;\n}\n.tooltip.bottom .tooltip-arrow {\n  border-bottom-color: #FFFFFF;\n}\n\n.tooltip-inner {\n  padding: 10px 15px;\n  min-width: 130px;\n}\n\n.footer {\n  position: relative;\n  bottom: 20px;\n  right: 0px;\n  width: 100%;\n  color: #FFFFFF;\n  z-index: 4;\n  text-align: right;\n  margin-top: 60px;\n  text-shadow: 0 0px 1px black;\n}\n.footer a {\n  color: #FFFFFF;\n}\n.footer .heart {\n  color: #FF3B30;\n}\n\n.withripple {\n  position: relative;\n}\n\n.ripple-container {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 1;\n  width: 100%;\n  height: 100%;\n  overflow: hidden;\n  border-radius: inherit;\n  pointer-events: none;\n}\n.disabled .ripple-container {\n  display: none;\n}\n\n.ripple {\n  position: absolute;\n  width: 20px;\n  height: 20px;\n  margin-left: -10px;\n  margin-top: -10px;\n  border-radius: 100%;\n  background-color: #000;\n  background-color: rgba(0, 0, 0, 0.05);\n  transform: scale(1);\n  transform-origin: 50%;\n  opacity: 0;\n  pointer-events: none;\n}\n\n.ripple.ripple-on {\n  transition: opacity 0.15s ease-in 0s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;\n  opacity: 0.1;\n}\n\n.ripple.ripple-out {\n  transition: opacity 0.1s linear 0s !important;\n  opacity: 0;\n}\n\n.radio label {\n  cursor: pointer;\n  padding-left: 35px;\n  position: relative;\n  color: rgba(0,0,0, 0.26);\n}\n.form-group.is-focused .radio label {\n  color: rgba(0,0,0, 0.26);\n}\n.form-group.is-focused .radio label:hover, .form-group.is-focused .radio label:focus {\n  color: rgba(0,0,0, .54);\n}\nfieldset[disabled] .form-group.is-focused .radio label {\n  color: rgba(0,0,0, 0.26);\n}\n.radio label span {\n  display: block;\n  position: absolute;\n  left: 10px;\n  top: 2px;\n  transition-duration: 0.2s;\n}\n.radio label .circle {\n  border: 1px solid rgba(0,0,0, .54);\n  height: 15px;\n  width: 15px;\n  border-radius: 100%;\n}\n.radio label .check {\n  height: 15px;\n  width: 15px;\n  border-radius: 100%;\n  background-color: #9c27b0;\n  transform: scale3d(0, 0, 0);\n}\n.radio label .check:after {\n  display: block;\n  position: absolute;\n  content: \"\";\n  background-color: rgba(0,0,0, 0.87);\n  left: -18px;\n  top: -18px;\n  height: 50px;\n  width: 50px;\n  border-radius: 100%;\n  z-index: 1;\n  opacity: 0;\n  margin: 0;\n  transform: scale3d(1.5, 1.5, 1);\n}\n.radio label input[type=radio]:not(:checked) ~ .check:after {\n  animation: rippleOff 500ms;\n}\n.radio label input[type=radio]:checked ~ .check:after {\n  animation: rippleOn 500ms;\n}\n.radio input[type=radio] {\n  opacity: 0;\n  height: 0;\n  width: 0;\n  overflow: hidden;\n}\n.radio input[type=radio]:checked ~ .check, .radio input[type=radio]:checked ~ .circle {\n  opacity: 1;\n}\n.radio input[type=radio]:checked ~ .check {\n  background-color: #9c27b0;\n}\n.radio input[type=radio]:checked ~ .circle {\n  border-color: #9c27b0;\n}\n.radio input[type=radio]:checked ~ .check {\n  transform: scale3d(0.65, 0.65, 1);\n}\n.radio input[type=radio][disabled] ~ .check, .radio input[type=radio][disabled] ~ .circle {\n  opacity: 0.26;\n}\n.radio input[type=radio][disabled] ~ .check {\n  background-color: #000000;\n}\n.radio input[type=radio][disabled] ~ .circle {\n  border-color: #000000;\n}\n\n@keyframes rippleOn {\n  0% {\n    opacity: 0;\n  }\n  50% {\n    opacity: 0.2;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@keyframes rippleOff {\n  0% {\n    opacity: 0;\n  }\n  50% {\n    opacity: 0.2;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n.checkbox label {\n  cursor: pointer;\n  padding-left: 0;\n  color: rgba(0,0,0, 0.26);\n}\n.form-group.is-focused .checkbox label {\n  color: rgba(0,0,0, 0.26);\n}\n.form-group.is-focused .checkbox label:hover, .form-group.is-focused .checkbox label:focus {\n  color: rgba(0,0,0, .54);\n}\nfieldset[disabled] .form-group.is-focused .checkbox label {\n  color: rgba(0,0,0, 0.26);\n}\n.checkbox input[type=checkbox] {\n  opacity: 0;\n  position: absolute;\n  margin: 0;\n  z-index: -1;\n  width: 0;\n  height: 0;\n  overflow: hidden;\n  left: 0;\n  pointer-events: none;\n}\n.checkbox .checkbox-material {\n  vertical-align: middle;\n  position: relative;\n  top: 3px;\n  padding-right: 5px;\n}\n.checkbox .checkbox-material:before {\n  display: block;\n  position: absolute;\n  left: 0;\n  content: \"\";\n  background-color: rgba(0, 0, 0, 0.84);\n  height: 20px;\n  width: 20px;\n  border-radius: 100%;\n  z-index: 1;\n  opacity: 0;\n  margin: 0;\n  transform: scale3d(2.3, 2.3, 1);\n}\n.checkbox .checkbox-material .check {\n  position: relative;\n  display: inline-block;\n  width: 20px;\n  height: 20px;\n  border: 1px solid rgba(0,0,0, .54);\n  overflow: hidden;\n  z-index: 1;\n  border-radius: 3px;\n}\n.checkbox .checkbox-material .check:before {\n  position: absolute;\n  content: \"\";\n  transform: rotate(45deg);\n  display: block;\n  margin-top: -3px;\n  margin-left: 7px;\n  width: 0;\n  height: 0;\n  background: red;\n  box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;\n  animation: checkbox-off 0.3s forwards;\n}\n.checkbox input[type=checkbox]:focus + .checkbox-material .check:after {\n  opacity: 0.2;\n}\n.checkbox input[type=checkbox]:checked + .checkbox-material .check {\n  background: #9c27b0;\n}\n.checkbox input[type=checkbox]:checked + .checkbox-material .check:before {\n  color: #FFFFFF;\n  box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;\n  animation: checkbox-on 0.3s forwards;\n}\n.checkbox input[type=checkbox]:checked + .checkbox-material:before {\n  animation: rippleOn 500ms;\n}\n.checkbox input[type=checkbox]:checked + .checkbox-material .check:after {\n  animation: rippleOn 500ms forwards;\n}\n.checkbox input[type=checkbox]:not(:checked) + .checkbox-material:before {\n  animation: rippleOff 500ms;\n}\n.checkbox input[type=checkbox]:not(:checked) + .checkbox-material .check:after {\n  animation: rippleOff 500ms;\n}\nfieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],\n.checkbox input[type=checkbox][disabled] ~ .checkbox-material .check,\n.checkbox input[type=checkbox][disabled] + .circle {\n  opacity: 0.5;\n}\n.checkbox input[type=checkbox][disabled] ~ .checkbox-material .check {\n  border-color: #000000;\n  opacity: .26;\n}\n.checkbox input[type=checkbox][disabled] + .checkbox-material .check:after {\n  background-color: rgba(0,0,0, 0.87);\n  transform: rotate(-45deg);\n}\n\n@keyframes checkbox-on {\n  0% {\n    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;\n  }\n  50% {\n    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;\n  }\n  100% {\n    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;\n  }\n}\n@keyframes rippleOn {\n  0% {\n    opacity: 0;\n  }\n  50% {\n    opacity: 0.2;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@keyframes rippleOff {\n  0% {\n    opacity: 0;\n  }\n  50% {\n    opacity: 0.2;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@media (max-width: 768px) {\n  .main .container {\n    margin-bottom: 50px;\n  }\n}\n@media (min-width: 768px) {\n  .navbar-form {\n    margin-top: 21px;\n    margin-bottom: 21px;\n    padding-left: 5px;\n    padding-right: 5px;\n  }\n\n  .btn-wd {\n    min-width: 140px;\n  }\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 190 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(191);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(115)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../node_modules/css-loader/index.js!./demo.css", function() {
+		var newContent = require("!!../../../node_modules/css-loader/index.js!./demo.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 191 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(110)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".logo-container{\n    left: 50px;\n    position: absolute;\n    top: 20px;\n    z-index: 3;\n}\n.logo-container .logo{\n    overflow: hidden;\n    border-radius: 50%;\n    border: 1px solid #333333;\n    width: 60px;\n    float: left;\n}\n.logo-container .brand{\n    font-size: 18px;\n    color: #FFF;\n    line-height: 20px;\n    float: left;\n    margin-left: 10px;\n    margin-top: 10px;\n    width: 60px\n}\n\nbody{\n    background-color: #CCCCCC;\n}\n\n.section .wizard-card{\n    min-height: inherit;\n}\n\n.tim-row{\n    margin-bottom: 20px;\n}\n\n.tim-white-buttons {\n    background-color: #777777;\n}\n.title{\n    margin-top: 30px;\n    margin-bottom: 25px;\n    min-height: 32px;\n    font-weight: 500;\n}\n\n\n\n.title.text-center{\n    margin-bottom: 50px;\n}\n.tim-typo{\n    padding-left: 25%;\n    margin-bottom: 40px;\n    position: relative;\n}\n.tim-typo .tim-note{\n    bottom: 10px;\n    color: #c0c1c2;\n    display: block;\n    font-weight: 400;\n    font-size: 13px;\n    line-height: 13px;\n    left: 0;\n    margin-left: 20px;\n    position: absolute;\n    width: 260px;\n}\n.tim-row{\n    padding-top: 50px;\n}\n.tim-row h3{\n    margin-top: 0;\n}\n.switch{\n    margin-right: 20px;\n}\n#navbar-full .navbar{\n    border-radius: 0 !important;\n    margin-bottom: 15px;\n    z-index: 2;\n}\n.space{\n    height: 130px;\n    display: block;\n}\n.space-110{\n    height: 110px;\n    display: block;\n}\n.space-50{\n    height: 50px;\n    display: block;\n}\n.space-70{\n    height: 70px;\n    display: block;\n}\n.navigation-example .img-src{\n    background-attachment: scroll;\n}\n\n.navigation-example{\n    background-position: center center;\n    background-size: cover;\n    margin-top:0;\n    min-height: 740px;\n}\n#notifications{\n    background-color: #FFFFFF;\n    display: block;\n    width: 100%;\n    position: relative;\n}\n#notifications .alert-danger{\n    margin-bottom: 0px;\n}\n.tim-note{\n    text-transform: capitalize;\n}\n\n#buttons .btn{\n    margin: 0 0px 15px;\n}\n.space-100{\n    height: 100px;\n    display: block;\n    width: 100%;\n}\n\n.be-social{\n    padding-bottom: 20px;\n/*     border-bottom: 1px solid #aaa; */\n    margin: 0 auto 40px;\n}\n.txt-white{\n    color: #FFFFFF;\n}\n.txt-gray{\n    color: #ddd !important;\n}\n\n\n.parallax{\n  width:100%;\n  height:570px;\n\n  display: block;\n  background-attachment: fixed;\n    background-repeat:no-repeat;\n    background-size:cover;\n    background-position: center center;\n\n}\n\n.logo-container.logo-documentation{\n    position: relative;\n    top: 0;\n    left: 0;\n}\n\n.logo-container .logo{\n    overflow: hidden;\n    border-radius: 50%;\n    border: 1px solid #333333;\n    width: 50px;\n    float: left;\n}\n\n.logo-container .brand{\n    font-size: 16px;\n    line-height: 18px;\n    float: left;\n    margin-left: 10px;\n    margin-top: 7px;\n    width: 70px;\n    height: 40px;\n    text-align: left;\n}\n\n\n.navbar-default .logo-container .brand{\n    color: #999999;\n}\n.navbar-transparent .logo-container .brand{\n    color: #FFFFFF;\n}\n\n.logo-container .brand-material{\n    font-size: 18px;\n    margin-top: 15px;\n    height: 25px;\n    width: auto;\n}\n\n.logo-container .logo img{\n    width: 100%;\n}\n.navbar-small .logo-container .brand{\n    color: #333333;\n}\n\n.fixed-section{\n    top: 90px;\n    max-height: 80vh;\n    overflow: scroll;\n}\n.fixed-section ul li{\n    list-style: none;\n}\n.fixed-section li a{\n    font-size: 14px;\n    padding: 2px;\n    display: block;\n    color: #666666;\n}\n.fixed-section li a.active{\n    color: #00bbff;\n}\n.fixed-section.float{\n    position: fixed;\n    top: 100px;\n    width: 200px;\n    margin-top: 0;\n}\n\n\n.parallax .parallax-image{\n    width: 100%;\n    overflow: hidden;\n    position: absolute;\n}\n.parallax .parallax-image img{\n    width: 100%;\n}\n\n@media (max-width: 768px){\n    .parallax .parallax-image{\n         width: 100%;\n         height: 640px;\n         overflow: hidden;\n     }\n    .parallax .parallax-image img{\n       height: 100%;\n       width: auto;\n   }\n}\n\n.separator{\n    content: \"Separator\";\n    color: #FFFFFF;\n    display: block;\n    width: 100%;\n    padding: 20px;\n}\n.separator-line{\n    background-color: #EEE;\n    height: 1px;\n    width: 100%;\n    display: block;\n}\n.separator.separator-gray{\n    background-color: #EEEEEE;\n}\n.social-buttons-demo .btn{\n    margin-right: 5px;\n    margin-bottom: 7px;\n}\n\n.img-container{\n    width: 100%;\n    overflow: hidden;\n}\n.img-container img{\n    width: 100%;\n}\n\n.lightbox img{\n    width: 100%;\n}\n.lightbox .modal-content{\n    overflow: hidden;\n}\n.lightbox .modal-body{\n    padding: 0;\n}\n@media screen and (min-width: 991px){\n    .lightbox .modal-dialog{\n        width: 960px;\n    }\n}\n\n@media (max-width: 768px){\n    .btn, .btn-morphing{\n        margin-bottom: 10px;\n    }\n    .parallax .motto{\n        top: 170px;\n        margin-top: 0;\n        font-size: 60px;\n        width: 270px;\n    }\n}\n\n/*       Loading dots  */\n\n/*      transitions */\n.presentation .front, .presentation .front:after, .presentation .front .btn, .logo-container .logo, .logo-container .brand{\n     -webkit-transition: all .2s;\n    -moz-transition: all .2s;\n    -o-transition: all .2s;\n    transition: all .2s;\n}\n\n\n#images h4{\n    margin-bottom: 30px;\n}\n#javascriptComponents{\n    padding-bottom: 0;\n}\n#javascriptComponents .btn-raised{\n    margin: 10px 5px;\n}\n\n\n/*      layer animation          */\n\n.layers-container{\n    display: block;\n    margin-top: 50px;\n    position: relative;\n}\n.layers-container img {\n  position: absolute;\n  width: 100%;\n  height: auto;\n  top: 0;\n  left: 0;\n  text-align: center;\n}\n\n.section-black {\n  background-color: #333;\n}\n\n.animate {\n  transition: 1.5s ease-in-out;\n  -moz-transition: 1.5s ease-in-out;\n  -webkit-transition: 1.5s ease-in-out;\n}\n\n.navbar-default.navbar-small .logo-container .brand{\n    color: #333333;\n}\n.navbar-transparent.navbar-small .logo-container .brand{\n    color: #FFFFFF;\n}\n.navbar-default.navbar-small .logo-container .brand{\n    color: #333333;\n}\n\n.sharing-area{\n    margin-top: 80px;\n}\n.sharing-area .btn{\n    margin: 15px 4px 0;\n    color: #FFFFFF;\n}\n.sharing-area .btn i{\n    font-size: 18px;\n    position: relative;\n    top: 2px;\n    margin-right: 5px;\n}\n.sharing-area .btn-twitter{\n    background-color: #55acee;\n}\n.sharing-area .btn-facebook{\n    background-color: #3b5998;\n}\n.sharing-area .btn-google-plus{\n    background-color: #dd4b39;\n}\n.sharing-area .btn-github{\n    background-color: #333333;\n}\n.section-thin,\n.section-notifications{\n    padding: 0;\n}\n.section-navbars{\n    padding-top: 0;\n}\n#navbar .navbar{\n    border-radius: 0;\n}\n.section-tabs{\n    background: #EEEEEE;\n}\n.section-pagination{\n    padding-bottom: 0;\n}\n.section-download h4{\n    margin-bottom: 50px;\n}\n.section-examples a{\n    text-decoration: none;\n}\n.section-examples h5{\n    margin-top: 30px;\n}\n.components-page .wrapper > .header,\n.tutorial-page .wrapper > .header{\n    height: 400px;\n    padding-top: 100px;\n    background-size: cover;\n    background-position: center center;\n}\n.components-page .title,\n.tutorial-page .title{\n    color: #FFFFFF;\n}\n\n.main {\n  background: #FFFFFF;\n  position: relative;\n  z-index: 3;\n}\n\n.main-raised {\n    margin: -60px 30px 0px;\n    border-radius: 6px;\n    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);\n}\n\n.header-filter {\n  position: relative;\n}\n.header-filter:before, .header-filter:after {\n  position: absolute;\n  z-index: 1;\n  width: 100%;\n  height: 100%;\n  display: block;\n  left: 0;\n  top: 0;\n  content: \"\";\n}\n.header-filter::before {\n  background-color: rgba(0, 0, 0, 0.4);\n}\n.header-filter .container {\n  z-index: 2;\n  position: relative;\n}\n\n.section {\n  padding: 70px 0;\n  background-position: center center;\n  background-size: cover;\n}\n\n\n\n.navbar {\n  border: 0;\n  border-radius: 3px;\n  box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);\n  padding: 10px 0;\n\n  -webkit-transition: all 150ms ease 0s;\n -moz-transition: all 150ms ease 0s;\n -o-transition: all 150ms ease 0s;\n -ms-transition: all 150ms ease 0s;\n transition: all 150ms ease 0s;\n}\n.navbar .navbar-brand {\n  position: relative;\n  height: 50px;\n  line-height: 30px;\n  color: inherit;\n  padding: 10px 15px;\n}\n.navbar .navbar-brand:hover, .navbar .navbar-brand:focus {\n  color: inherit;\n  background-color: transparent;\n}\n\n.navbar.navbar-transparent {\n  background-color: transparent;\n  box-shadow: none;\n  color: #fff;\n  padding-top: 25px;\n}\n\n.navbar-fixed-top {\n  border-radius: 0;\n}\n\n.navbar .navbar-nav > li > a .material-icons,\n.navbar .navbar-nav > li > a .fa {\n  font-size: 20px;\n  max-width: 20px;\n}\n.navbar .navbar-nav > li > a:hover,\n.navbar .navbar-nav > li > a:focus {\n    color: inherit;\n    background-color: transparent;\n}\n\n.navbar .navbar-nav > li > a:not(.btn) .material-icons {\n  margin-top: -3px;\n  top: 0px;\n  position: relative;\n  margin-right: 3px;\n}\n\n.navbar, .navbar.navbar-default {\n  background-color: #9c27b0;\n  color: #FFFFFF;\n}\n\n.navbar .navbar-nav > li > a {\n  color: inherit;\n  padding-top: 15px;\n  padding-bottom: 15px;\n  font-weight: 400;\n  font-size: 12px;\n  text-transform: uppercase;\n  border-radius: 3px;\n}\n@media (max-width: 1199px) {\n\n  .navbar .navbar-brand {\n    height: 50px;\n    padding: 10px 15px;\n  }\n  .navbar .navbar-nav > li > a {\n    padding-top: 15px;\n    padding-bottom: 15px;\n  }\n}\n\nfooter {\n  padding: 15px 0;\n  text-align: center;\n\n}\n.footer a{\n    font-weight: bold;\n}\n\nfooter.footer-documentation{\n    margin-top: 0;\n    bottom: 0;\n    text-shadow: none;\n    color: inherit;\n}\n\nfooter.footer-documentation li a{\n    color: inherit;\n}\n\nfooter.footer-documentation li a:hover,\nfooter.footer-documentation li a:focus{\n    color: #89229b;\n}\n\nfooter ul {\n  margin-bottom: 0;\n  padding: 0;\n  list-style: none;\n}\nfooter ul li {\n  display: inline-block;\n}\nfooter ul li a {\n  color: inherit;\n  padding: 15px;\n  font-weight: 500;\n  font-size: 12px;\n  text-transform: uppercase;\n  border-radius: 3px;\n  text-decoration: none;\n  position: relative;\n  display: block;\n}\nfooter ul li a:hover {\n  text-decoration: none;\n}\nfooter ul li .btn {\n  margin: 0;\n}\nfooter ul.links-horizontal:first-child a {\n  padding-left: 0;\n}\nfooter ul.links-horizontal:last-child a {\n  padding-right: 0;\n}\nfooter ul.links-vertical li {\n  display: block;\n}\nfooter ul.links-vertical li a {\n  padding: 5px 0;\n}\nfooter .social-buttons a,\nfooter .social-buttons .btn {\n  margin-top: 5px;\n  margin-bottom: 5px;\n}\nfooter .footer-brand {\n  float: left;\n  height: 50px;\n  padding: 15px 15px;\n  font-size: 18px;\n  line-height: 20px;\n  margin-left: -15px;\n}\nfooter .footer-brand:hover, footer .footer-brand:focus {\n  color: #3C4858;\n}\nfooter .copyright {\n  padding: 15px 0;\n  text-align: center;\n}\nfooter .copyright .material-icons {\n  font-size: 18px;\n  position: relative;\n  top: 3px;\n}\nfooter .pull-center {\n  display: inline-block;\n  float: none;\n}\n\n@media (max-width: 768px) {\n  .footer .copyright {\n    display: inline-block;\n    text-align: center;\n    padding: 10px 0;\n    float: none !important;\n    width: 100%;\n  }\n\n  .navbar.navbar-transparent {\n    background-color: rgba(0, 0, 0, 0.4);\n    padding-top: 10px;\n    border-radius: 0;\n  }\n\n  .main-raised {\n    margin-left: 10px;\n    margin-right: 10px;\n  }\n}\n\n\n/*          For demo purpose         */\n\n\n.fixed-plugin{\n    position: fixed;\n    top:0px;\n    right: 50px;\n    z-index: 1031;\n}\n.fixed-plugin .fa-cog{\n    color: #FFFFFF;\n    background-color: rgba(0,0,0,.2);\n    padding: 10px;\n    border-radius: 0 0 6px 6px;\n}\n.fixed-plugin .dropdown-menu{\n    right: 0;\n    left: auto;\n}\n\n.fixed-plugin li.header-title{\n    font-weight: 400;\n    line-height: 40px;\n    color: #333;\n    white-space: nowrap;\n    padding: 0 15px;\n}\n\n.fixed-plugin .switch-trigger .ripple-container{\n    display: none;\n}\n\n.fixed-plugin .dropdown-menu>li>a:focus,\n.fixed-plugin .dropdown-menu>li>a:hover{\n    background: transparent;\n}\n\n.fixed-plugin .fa-circle-thin{\n    color: #FFFFFF;\n}\n.fixed-plugin .active .fa-circle-thin{\n    color: #00bbff;\n}\n.fixed-plugin .dropdown-menu > li > a{\n    padding-left: 10px;\n    padding-right: 10px;\n}\n.fixed-plugin .dropdown-menu > li:first-child > a{\n    margin-top: 10px;\n}\n.fixed-plugin .dropdown-menu > .active > a, .fixed-plugin .dropdown-menu > .active > a:hover, .fixed-plugin .dropdown-menu > .active > a:focus{\n    background: none;\n    color: #777777;\n}\n.fixed-plugin img{\n    border-radius: 6px;\n    width: 150px;\n    max-height: 65px;\n    border: 4px solid #FFFFFF;\n\n}\n.fixed-plugin .active img, .fixed-plugin a:hover img{\n    border-color: #00bbff;\n}\n\n.fixed-plugin .btn{\n    margin: 10px 0px 0;\n    color: #FFFFFF;\n}\n.fixed-plugin .btn:hover{\n    color: #FFFFFF;\n}\n.fixed-plugin .badge{\n    border: 3px solid #FFFFFF;\n    border-radius: 50%;\n    cursor: pointer;\n    display: inline-block;\n    height: 23px;\n    margin-right: 5px;\n    position: relative;\n    top: 5px;\n    width: 23px;\n}\n.fixed-plugin .badge.active, .fixed-plugin .badge:hover{\n    border-color: #00bbff;\n}\n.fixed-plugin .badge-purple{\n    background-color: #9c27b0;\n}\n.fixed-plugin .badge-blue{\n    background-color: #00bcd4;\n}\n.fixed-plugin .badge-green{\n    background-color: #4caf50;\n}\n.fixed-plugin .badge-orange{\n    background-color: #ff9800;\n}\n.fixed-plugin .badge-red{\n    background-color: #f44336;\n}\n\n@media (max-width:768px){\n    .fixed-plugin{\n        top: 80px;\n        right: 0px;\n    }\n    .main .container{\n        margin-bottom: 50px;\n    }\n}\n\n@media (min-width: 768px){\n\n    .fixed-plugin .dropdown-menu{\n        display: block;\n        margin: 0;\n        padding: 0;\n        z-index: 9000;\n        position: absolute;\n        -webkit-border-radius: 10px;\n        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.125);\n        border-radius: 10px;\n        -webkit-box-sizing: border-box;\n        -moz-box-sizing: border-box;\n        box-sizing: border-box;\n        opacity: 0;\n        -ms-filter: \"alpha(opacity=0)\";\n        -webkit-filter: alpha(opacity=0);\n        -moz-filter: alpha(opacity=0);\n        -ms-filter: alpha(opacity=0);\n        -o-filter: alpha(opacity=0);\n        filter: alpha(opacity=0);\n        -webkit-transform: scale(0);\n        -moz-transform: scale(0);\n        -o-transform: scale(0);\n        -ms-transform: scale(0);\n        transform: scale(0);\n        -webkit-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);\n        -moz-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);\n        -o-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);\n        -ms-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);\n        transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);\n\n    }\n    .fixed-plugin .open .dropdown-menu{\n        -webkit-transform-origin: 29px -50px;\n        -moz-transform-origin: 29px -50px;\n        -o-transform-origin: 29px -50px;\n        -ms-transform-origin: 29px -50px;\n        transform-origin: 29px -50px;\n        -webkit-transform: scale(1);\n        -moz-transform: scale(1);\n        -o-transform: scale(1);\n        -ms-transform: scale(1);\n        transform: scale(1);\n        opacity: 1;\n        -ms-filter: none;\n        -webkit-filter: none;\n        -moz-filter: none;\n        -ms-filter: none;\n        -o-filter: none;\n        filter: none;\n    }\n    .fixed-plugin .dropdown-menu:before{\n        border-bottom: 11px solid rgba(0, 0, 0, 0.2);\n        border-left: 11px solid rgba(0, 0, 0, 0);\n        border-right: 11px solid rgba(0, 0, 0, 0);\n        content: \"\";\n        display: inline-block;\n        position: absolute;\n        right: 10px;\n        margin-left: auto;\n        top: -11px;\n    }\n    .fixed-plugin .dropdown-menu:after {\n        border-bottom: 11px solid #FFFFFF;\n        border-left: 11px solid rgba(0, 0, 0, 0);\n        border-right: 11px solid rgba(0, 0, 0, 0);\n        content: \"\";\n        display: inline-block;\n        position: absolute;\n        right: 10px;\n        margin-left: auto;\n        top: -10px;\n    }\n    .btn-wd {\n        min-width: 140px;\n    }\n}\n\n\n.fixed-plugin .license,\n.fixed-plugin .tutorial{\n    margin: 20px 20px 0px;\n    padding: 10px 0 0;\n    color: #aaaaaa;\n    border-top: 1px solid #eeeeee;\n    font-size: 12px;\n    font-weight: 600;\n}\n\n.fixed-plugin .tutorial{\n    margin: 10px 20px 0;\n}\n\n\n\n.fixed-plugin ul > li:last-child a{\n    margin-bottom: 15px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 192 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(jQuery) {
+
+/*!
+ * jQuery twitter bootstrap wizard plugin
+ * Examples and documentation at: http://github.com/VinceG/twitter-bootstrap-wizard
+ * version 1.0
+ * Requires jQuery v1.3.2 or later
+ * Supports Bootstrap 2.2.x, 2.3.x, 3.0
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ * Authors: Vadim Vincent Gabriel (http://vadimg.com), Jason Gill (www.gilluminate.com)
+ */
+;(function ($) {
+	var bootstrapWizardCreate = function bootstrapWizardCreate(element, options) {
+		var element = $(element);
+		var obj = this;
+
+		// selector skips any 'li' elements that do not contain a child with a tab data-toggle
+		var baseItemSelector = 'li:has([data-toggle="tab"])';
+
+		// Merge options with defaults
+		var $settings = $.extend({}, $.fn.bootstrapWizard.defaults, options);
+		var $activeTab = null;
+		var $navigation = null;
+
+		this.rebindClick = function (selector, fn) {
+			selector.unbind('click', fn).bind('click', fn);
+		};
+
+		this.fixNavigationButtons = function () {
+			// Get the current active tab
+			if (!$activeTab.length) {
+				// Select first one
+				$navigation.find('a:first').tab('show');
+				$activeTab = $navigation.find(baseItemSelector + ':first');
+			}
+
+			// See if we're currently in the first/last then disable the previous and last buttons
+			$($settings.previousSelector, element).toggleClass('disabled', obj.firstIndex() >= obj.currentIndex());
+			$($settings.nextSelector, element).toggleClass('disabled', obj.currentIndex() >= obj.navigationLength());
+
+			// We are unbinding and rebinding to ensure single firing and no double-click errors
+			obj.rebindClick($($settings.nextSelector, element), obj.next);
+			obj.rebindClick($($settings.previousSelector, element), obj.previous);
+			obj.rebindClick($($settings.lastSelector, element), obj.last);
+			obj.rebindClick($($settings.firstSelector, element), obj.first);
+
+			if ($settings.onTabShow && typeof $settings.onTabShow === 'function' && $settings.onTabShow($activeTab, $navigation, obj.currentIndex()) === false) {
+				return false;
+			}
+		};
+
+		this.next = function (e) {
+
+			// If we clicked the last then dont activate this
+			if (element.hasClass('last')) {
+				return false;
+			}
+
+			if ($settings.onNext && typeof $settings.onNext === 'function' && $settings.onNext($activeTab, $navigation, obj.nextIndex()) === false) {
+				return false;
+			}
+
+			// Did we click the last button
+			$index = obj.nextIndex();
+			if ($index > obj.navigationLength()) {} else {
+				$navigation.find(baseItemSelector + ':eq(' + $index + ') a').tab('show');
+			}
+		};
+
+		this.previous = function (e) {
+
+			// If we clicked the first then dont activate this
+			if (element.hasClass('first')) {
+				return false;
+			}
+
+			if ($settings.onPrevious && typeof $settings.onPrevious === 'function' && $settings.onPrevious($activeTab, $navigation, obj.previousIndex()) === false) {
+				return false;
+			}
+
+			$index = obj.previousIndex();
+			if ($index < 0) {} else {
+				$navigation.find(baseItemSelector + ':eq(' + $index + ') a').tab('show');
+			}
+		};
+
+		this.first = function (e) {
+			if ($settings.onFirst && typeof $settings.onFirst === 'function' && $settings.onFirst($activeTab, $navigation, obj.firstIndex()) === false) {
+				return false;
+			}
+
+			// If the element is disabled then we won't do anything
+			if (element.hasClass('disabled')) {
+				return false;
+			}
+			$navigation.find(baseItemSelector + ':eq(0) a').tab('show');
+		};
+		this.last = function (e) {
+			if ($settings.onLast && typeof $settings.onLast === 'function' && $settings.onLast($activeTab, $navigation, obj.lastIndex()) === false) {
+				return false;
+			}
+
+			// If the element is disabled then we won't do anything
+			if (element.hasClass('disabled')) {
+				return false;
+			}
+			$navigation.find(baseItemSelector + ':eq(' + obj.navigationLength() + ') a').tab('show');
+		};
+		this.currentIndex = function () {
+			return $navigation.find(baseItemSelector).index($activeTab);
+		};
+		this.firstIndex = function () {
+			return 0;
+		};
+		this.lastIndex = function () {
+			return obj.navigationLength();
+		};
+		this.getIndex = function (e) {
+			return $navigation.find(baseItemSelector).index(e);
+		};
+		this.nextIndex = function () {
+			return $navigation.find(baseItemSelector).index($activeTab) + 1;
+		};
+		this.previousIndex = function () {
+			return $navigation.find(baseItemSelector).index($activeTab) - 1;
+		};
+		this.navigationLength = function () {
+			return $navigation.find(baseItemSelector).length - 1;
+		};
+		this.activeTab = function () {
+			return $activeTab;
+		};
+		this.nextTab = function () {
+			return $navigation.find(baseItemSelector + ':eq(' + (obj.currentIndex() + 1) + ')').length ? $navigation.find(baseItemSelector + ':eq(' + (obj.currentIndex() + 1) + ')') : null;
+		};
+		this.previousTab = function () {
+			if (obj.currentIndex() <= 0) {
+				return null;
+			}
+			return $navigation.find(baseItemSelector + ':eq(' + parseInt(obj.currentIndex() - 1) + ')');
+		};
+		this.show = function (index) {
+			if (isNaN(index)) {
+				return element.find(baseItemSelector + ' a[href=#' + index + ']').tab('show');
+			} else {
+				return element.find(baseItemSelector + ':eq(' + index + ') a').tab('show');
+			}
+		};
+		this.disable = function (index) {
+			$navigation.find(baseItemSelector + ':eq(' + index + ')').addClass('disabled');
+		};
+		this.enable = function (index) {
+			$navigation.find(baseItemSelector + ':eq(' + index + ')').removeClass('disabled');
+		};
+		this.hide = function (index) {
+			$navigation.find(baseItemSelector + ':eq(' + index + ')').hide();
+		};
+		this.display = function (index) {
+			$navigation.find(baseItemSelector + ':eq(' + index + ')').show();
+		};
+		this.remove = function (args) {
+			var $index = args[0];
+			var $removeTabPane = typeof args[1] != 'undefined' ? args[1] : false;
+			var $item = $navigation.find(baseItemSelector + ':eq(' + $index + ')');
+
+			// Remove the tab pane first if needed
+			if ($removeTabPane) {
+				var $href = $item.find('a').attr('href');
+				$($href).remove();
+			}
+
+			// Remove menu item
+			$item.remove();
+		};
+
+		var innerTabClick = function innerTabClick(e) {
+			// Get the index of the clicked tab
+			var clickedIndex = $navigation.find(baseItemSelector).index($(e.currentTarget).parent(baseItemSelector));
+			if ($settings.onTabClick && typeof $settings.onTabClick === 'function' && $settings.onTabClick($activeTab, $navigation, obj.currentIndex(), clickedIndex) === false) {
+				return false;
+			}
+		};
+
+		var innerTabShown = function innerTabShown(e) {
+			// use shown instead of show to help prevent double firing
+			$element = $(e.target).parent();
+			var nextTab = $navigation.find(baseItemSelector).index($element);
+
+			// If it's disabled then do not change
+			if ($element.hasClass('disabled')) {
+				return false;
+			}
+
+			if ($settings.onTabChange && typeof $settings.onTabChange === 'function' && $settings.onTabChange($activeTab, $navigation, obj.currentIndex(), nextTab) === false) {
+				return false;
+			}
+
+			$activeTab = $element; // activated tab
+			obj.fixNavigationButtons();
+		};
+
+		this.resetWizard = function () {
+
+			// remove the existing handlers
+			$('a[data-toggle="tab"]', $navigation).off('click', innerTabClick);
+			$('a[data-toggle="tab"]', $navigation).off('shown shown.bs.tab', innerTabShown);
+
+			// reset elements based on current state of the DOM
+			$navigation = element.find('ul:first', element);
+			$activeTab = $navigation.find(baseItemSelector + '.active', element);
+
+			// re-add handlers
+			$('a[data-toggle="tab"]', $navigation).on('click', innerTabClick);
+			$('a[data-toggle="tab"]', $navigation).on('shown shown.bs.tab', innerTabShown);
+
+			obj.fixNavigationButtons();
+		};
+
+		$navigation = element.find('ul:first', element);
+		$activeTab = $navigation.find(baseItemSelector + '.active', element);
+
+		if (!$navigation.hasClass($settings.tabClass)) {
+			$navigation.addClass($settings.tabClass);
+		}
+
+		// Load onInit
+		if ($settings.onInit && typeof $settings.onInit === 'function') {
+			$settings.onInit($activeTab, $navigation, 0);
+		}
+
+		// Load onShow
+		if ($settings.onShow && typeof $settings.onShow === 'function') {
+			$settings.onShow($activeTab, $navigation, obj.nextIndex());
+		}
+
+		$('a[data-toggle="tab"]', $navigation).on('click', innerTabClick);
+
+		// attach to both shown and shown.bs.tab to support Bootstrap versions 2.3.2 and 3.0.0
+		$('a[data-toggle="tab"]', $navigation).on('shown shown.bs.tab', innerTabShown);
+	};
+	$.fn.bootstrapWizard = function (options) {
+		//expose methods
+		if (typeof options == 'string') {
+			var args = Array.prototype.slice.call(arguments, 1);
+			if (args.length === 1) {
+				args.toString();
+			}
+			return this.data('bootstrapWizard')[options](args);
+		}
+		return this.each(function (index) {
+			var element = $(this);
+			// Return early if this element already has a plugin instance
+			if (element.data('bootstrapWizard')) return;
+			// pass options to plugin constructor
+			var wizard = new bootstrapWizardCreate(element, options);
+			// Store plugin object in this element's data
+			element.data('bootstrapWizard', wizard);
+			// and then trigger initial change
+			wizard.fixNavigationButtons();
+		});
+	};
+
+	// expose options
+	$.fn.bootstrapWizard.defaults = {
+		tabClass: 'nav nav-pills',
+		nextSelector: '.wizard li.next',
+		previousSelector: '.wizard li.previous',
+		firstSelector: '.wizard li.first',
+		lastSelector: '.wizard li.last',
+		onShow: null,
+		onInit: null,
+		onNext: null,
+		onPrevious: null,
+		onLast: null,
+		onFirst: null,
+		onTabChange: null,
+		onTabClick: null,
+		onTabShow: null
+	};
+})(jQuery);
+
+//  Material Design Core Functions
+
+!function (t) {
+	function o(t) {
+		return "undefined" == typeof t.which ? !0 : "number" == typeof t.which && t.which > 0 ? !t.ctrlKey && !t.metaKey && !t.altKey && 8 != t.which && 9 != t.which && 13 != t.which && 16 != t.which && 17 != t.which && 20 != t.which && 27 != t.which : !1;
+	}function i(o) {
+		var i = t(o);i.prop("disabled") || i.closest(".form-group").addClass("is-focused");
+	}function n(o) {
+		o.closest("label").hover(function () {
+			var o = t(this).find("input");o.prop("disabled") || i(o);
+		}, function () {
+			e(t(this).find("input"));
+		});
+	}function e(o) {
+		t(o).closest(".form-group").removeClass("is-focused");
+	}t.expr[":"].notmdproc = function (o) {
+		return t(o).data("mdproc") ? !1 : !0;
+	}, t.material = { options: { validate: !0, input: !0, ripples: !0, checkbox: !0, togglebutton: !0, radio: !0, arrive: !0, autofill: !1, withRipples: [".btn:not(.btn-link)", ".card-image", ".navbar a:not(.withoutripple)", ".footer a:not(.withoutripple)", ".dropdown-menu a", ".nav-tabs a:not(.withoutripple)", ".withripple", ".pagination li:not(.active):not(.disabled) a:not(.withoutripple)"].join(","), inputElements: "input.form-control, textarea.form-control, select.form-control", checkboxElements: ".checkbox > label > input[type=checkbox]", togglebuttonElements: ".togglebutton > label > input[type=checkbox]", radioElements: ".radio > label > input[type=radio]" }, checkbox: function checkbox(o) {
+			var i = t(o ? o : this.options.checkboxElements).filter(":notmdproc").data("mdproc", !0).after("<span class='checkbox-material'><span class='check'></span></span>");n(i);
+		}, togglebutton: function togglebutton(o) {
+			var i = t(o ? o : this.options.togglebuttonElements).filter(":notmdproc").data("mdproc", !0).after("<span class='toggle'></span>");n(i);
+		}, radio: function radio(o) {
+			var i = t(o ? o : this.options.radioElements).filter(":notmdproc").data("mdproc", !0).after("<span class='circle'></span><span class='check'></span>");n(i);
+		}, input: function input(o) {
+			t(o ? o : this.options.inputElements).filter(":notmdproc").data("mdproc", !0).each(function () {
+				var o = t(this),
+				    i = o.closest(".form-group");0 === i.length && (o.wrap("<div class='form-group'></div>"), i = o.closest(".form-group")), o.attr("data-hint") && (o.after("<p class='help-block'>" + o.attr("data-hint") + "</p>"), o.removeAttr("data-hint"));var n = { "input-lg": "form-group-lg", "input-sm": "form-group-sm" };if (t.each(n, function (t, n) {
+					o.hasClass(t) && (o.removeClass(t), i.addClass(n));
+				}), o.hasClass("floating-label")) {
+					var e = o.attr("placeholder");o.attr("placeholder", null).removeClass("floating-label");var a = o.attr("id"),
+					    r = "";a && (r = "for='" + a + "'"), i.addClass("label-floating"), o.after("<label " + r + "class='control-label'>" + e + "</label>");
+				}(null === o.val() || "undefined" == o.val() || "" === o.val()) && i.addClass("is-empty"), i.append("<span class='material-input'></span>"), i.find("input[type=file]").length > 0 && i.addClass("is-fileinput");
+			});
+		}, attachInputEventHandlers: function attachInputEventHandlers() {
+			var n = this.options.validate;t(document).on("change", ".checkbox input[type=checkbox]", function () {
+				t(this).blur();
+			}).on("keydown paste", ".form-control", function (i) {
+				o(i) && t(this).closest(".form-group").removeClass("is-empty");
+			}).on("keyup change", ".form-control", function () {
+				var o = t(this),
+				    i = o.closest(".form-group"),
+				    e = "undefined" == typeof o[0].checkValidity || o[0].checkValidity();"" === o.val() ? i.addClass("is-empty") : i.removeClass("is-empty"), n && (e ? i.removeClass("has-error") : i.addClass("has-error"));
+			}).on("focus", ".form-control, .form-group.is-fileinput", function () {
+				i(this);
+			}).on("blur", ".form-control, .form-group.is-fileinput", function () {
+				e(this);
+			}).on("change", ".form-group input", function () {
+				var o = t(this);if ("file" != o.attr("type")) {
+					var i = o.closest(".form-group"),
+					    n = o.val();n ? i.removeClass("is-empty") : i.addClass("is-empty");
+				}
+			}).on("change", ".form-group.is-fileinput input[type='file']", function () {
+				var o = t(this),
+				    i = o.closest(".form-group"),
+				    n = "";t.each(this.files, function (t, o) {
+					n += o.name + ", ";
+				}), n = n.substring(0, n.length - 2), n ? i.removeClass("is-empty") : i.addClass("is-empty"), i.find("input.form-control[readonly]").val(n);
+			});
+		}, ripples: function ripples(o) {
+			t(o ? o : this.options.withRipples).ripples();
+		}, autofill: function autofill() {
+			var o = setInterval(function () {
+				t("input[type!=checkbox]").each(function () {
+					var o = t(this);o.val() && o.val() !== o.attr("value") && o.trigger("change");
+				});
+			}, 100);setTimeout(function () {
+				clearInterval(o);
+			}, 1e4);
+		}, attachAutofillEventHandlers: function attachAutofillEventHandlers() {
+			var o;t(document).on("focus", "input", function () {
+				var i = t(this).parents("form").find("input").not("[type=file]");o = setInterval(function () {
+					i.each(function () {
+						var o = t(this);o.val() !== o.attr("value") && o.trigger("change");
+					});
+				}, 100);
+			}).on("blur", ".form-group input", function () {
+				clearInterval(o);
+			});
+		}, init: function init(o) {
+			this.options = t.extend({}, this.options, o);var i = t(document);t.fn.ripples && this.options.ripples && this.ripples(), this.options.input && (this.input(), this.attachInputEventHandlers()), this.options.checkbox && this.checkbox(), this.options.togglebutton && this.togglebutton(), this.options.radio && this.radio(), this.options.autofill && (this.autofill(), this.attachAutofillEventHandlers()), document.arrive && this.options.arrive && (t.fn.ripples && this.options.ripples && i.arrive(this.options.withRipples, function () {
+				t.material.ripples(t(this));
+			}), this.options.input && i.arrive(this.options.inputElements, function () {
+				t.material.input(t(this));
+			}), this.options.checkbox && i.arrive(this.options.checkboxElements, function () {
+				t.material.checkbox(t(this));
+			}), this.options.radio && i.arrive(this.options.radioElements, function () {
+				t.material.radio(t(this));
+			}), this.options.togglebutton && i.arrive(this.options.togglebuttonElements, function () {
+				t.material.togglebutton(t(this));
+			}));
+		} };
+}(jQuery), function (t, o, i, n) {
+	"use strict";
+	function e(o, i) {
+		r = this, this.element = t(o), this.options = t.extend({}, s, i), this._defaults = s, this._name = a, this.init();
+	}var a = "ripples",
+	    r = null,
+	    s = {};e.prototype.init = function () {
+		var i = this.element;i.on("mousedown touchstart", function (n) {
+			if (!r.isTouch() || "mousedown" !== n.type) {
+				i.find(".ripple-container").length || i.append('<div class="ripple-container"></div>');var e = i.children(".ripple-container"),
+				    a = r.getRelY(e, n),
+				    s = r.getRelX(e, n);if (a || s) {
+					var l = r.getRipplesColor(i),
+					    p = t("<div></div>");p.addClass("ripple").css({ left: s, top: a, "background-color": l }), e.append(p), function () {
+						return o.getComputedStyle(p[0]).opacity;
+					}(), r.rippleOn(i, p), setTimeout(function () {
+						r.rippleEnd(p);
+					}, 500), i.on("mouseup mouseleave touchend", function () {
+						p.data("mousedown", "off"), "off" === p.data("animating") && r.rippleOut(p);
+					});
+				}
+			}
+		});
+	}, e.prototype.getNewSize = function (t, o) {
+		return Math.max(t.outerWidth(), t.outerHeight()) / o.outerWidth() * 2.5;
+	}, e.prototype.getRelX = function (t, o) {
+		var i = t.offset();return r.isTouch() ? (o = o.originalEvent, 1 === o.touches.length ? o.touches[0].pageX - i.left : !1) : o.pageX - i.left;
+	}, e.prototype.getRelY = function (t, o) {
+		var i = t.offset();return r.isTouch() ? (o = o.originalEvent, 1 === o.touches.length ? o.touches[0].pageY - i.top : !1) : o.pageY - i.top;
+	}, e.prototype.getRipplesColor = function (t) {
+		var i = t.data("ripple-color") ? t.data("ripple-color") : o.getComputedStyle(t[0]).color;return i;
+	}, e.prototype.hasTransitionSupport = function () {
+		var t = i.body || i.documentElement,
+		    o = t.style,
+		    e = o.transition !== n || o.WebkitTransition !== n || o.MozTransition !== n || o.MsTransition !== n || o.OTransition !== n;return e;
+	}, e.prototype.isTouch = function () {
+		return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+		);
+	}, e.prototype.rippleEnd = function (t) {
+		t.data("animating", "off"), "off" === t.data("mousedown") && r.rippleOut(t);
+	}, e.prototype.rippleOut = function (t) {
+		t.off(), r.hasTransitionSupport() ? t.addClass("ripple-out") : t.animate({ opacity: 0 }, 100, function () {
+			t.trigger("transitionend");
+		}), t.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function () {
+			t.remove();
+		});
+	}, e.prototype.rippleOn = function (t, o) {
+		var i = r.getNewSize(t, o);r.hasTransitionSupport() ? o.css({ "-ms-transform": "scale(" + i + ")", "-moz-transform": "scale(" + i + ")", "-webkit-transform": "scale(" + i + ")", transform: "scale(" + i + ")" }).addClass("ripple-on").data("animating", "on").data("mousedown", "on") : o.animate({ width: 2 * Math.max(t.outerWidth(), t.outerHeight()), height: 2 * Math.max(t.outerWidth(), t.outerHeight()), "margin-left": -1 * Math.max(t.outerWidth(), t.outerHeight()), "margin-top": -1 * Math.max(t.outerWidth(), t.outerHeight()), opacity: .2 }, 500, function () {
+			o.trigger("transitionend");
+		});
+	}, t.fn.ripples = function (o) {
+		return this.each(function () {
+			t.data(this, "plugin_" + a) || t.data(this, "plugin_" + a, new e(this, o));
+		});
+	};
+}(jQuery, window, document);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(22)))
+
+/***/ }),
+/* 193 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {
+
+/*! =========================================================
+ *
+ * Material Bootstrap Wizard - V1.0.1
+ *
+ * =========================================================
+ *
+ * Copyright 2016 Creative Tim (http://www.creative-tim.com/product/material-bootstrap-wizard)
+ *
+ *
+ *                       _oo0oo_
+ *                      o8888888o
+ *                      88" . "88
+ *                      (| -_- |)
+ *                      0\  =  /0
+ *                    ___/`---'\___
+ *                  .' \|     |// '.
+ *                 / \|||  :  |||// \
+ *                / _||||| -:- |||||- \
+ *               |   | \\  -  /// |   |
+ *               | \_|  ''\---/''  |_/ |
+ *               \  .-\__  '-'  ___/-. /
+ *             ___'. .'  /--.--\  `. .'___
+ *          ."" '<  `.___\_<|>_/___.' >' "".
+ *         | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+ *         \  \ `_.   \_ __\ /__ _/   .-` /  /
+ *     =====`-.____`.___ \_____/___.-`___.-'=====
+ *                       `=---='
+ *
+ *     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *
+ *               Buddha Bless:  "No Bugs"
+ *
+ * ========================================================= */
+
+// Material Bootstrap Wizard Functions
+
+searchVisible = 0;
+transparent = true;
+
+$(document).ready(function () {
+
+    $.material.init();
+
+    /*  Activate the tooltips      */
+    $('[rel="tooltip"]').tooltip();
+
+    // Code for the Validator
+    var $validator = $('.wizard-card form').validate({
+        rules: {
+            firstname: {
+                required: true,
+                minlength: 3
+            },
+            lastname: {
+                required: true,
+                minlength: 3
+            },
+            email: {
+                required: true,
+                minlength: 3
+            }
+        },
+
+        errorPlacement: function errorPlacement(error, element) {
+            $(element).parent('div').addClass('has-error');
+        }
+    });
+
+    // Wizard Initialization
+    $('.wizard-card').bootstrapWizard({
+        'tabClass': 'nav nav-pills',
+        'nextSelector': '.btn-next',
+        'previousSelector': '.btn-previous',
+
+        onNext: function onNext(tab, navigation, index) {
+            var $valid = $('.wizard-card form').valid();
+            if (!$valid) {
+                $validator.focusInvalid();
+                return false;
+            }
+        },
+
+        onInit: function onInit(tab, navigation, index) {
+
+            //check number of tabs and fill the entire row
+            var $total = navigation.find('li').length;
+            $width = 100 / $total;
+            var $wizard = navigation.closest('.wizard-card');
+
+            $display_width = $(document).width();
+
+            if ($display_width < 600 && $total > 3) {
+                $width = 50;
+            }
+
+            navigation.find('li').css('width', $width + '%');
+            $first_li = navigation.find('li:first-child a').html();
+            $moving_div = $('<div class="moving-tab">' + $first_li + '</div>');
+            $('.wizard-card .wizard-navigation').append($moving_div);
+            refreshAnimation($wizard, index);
+            $('.moving-tab').css('transition', 'transform 0s');
+        },
+
+        onTabClick: function onTabClick(tab, navigation, index) {
+            var $valid = $('.wizard-card form').valid();
+
+            if (!$valid) {
+                return false;
+            } else {
+                return true;
+            }
+        },
+
+        onTabShow: function onTabShow(tab, navigation, index) {
+            var $total = navigation.find('li').length;
+            var $current = index + 1;
+
+            var $wizard = navigation.closest('.wizard-card');
+
+            // If it's the last tab then hide the last button and show the finish instead
+            if ($current >= $total) {
+                $($wizard).find('.btn-next').hide();
+                $($wizard).find('.btn-finish').show();
+            } else {
+                $($wizard).find('.btn-next').show();
+                $($wizard).find('.btn-finish').hide();
+            }
+
+            button_text = navigation.find('li:nth-child(' + $current + ') a').html();
+
+            setTimeout(function () {
+                $('.moving-tab').text(button_text);
+            }, 150);
+
+            var checkbox = $('.footer-checkbox');
+
+            if (!index == 0) {
+                $(checkbox).css({
+                    'opacity': '0',
+                    'visibility': 'hidden',
+                    'position': 'absolute'
+                });
+            } else {
+                $(checkbox).css({
+                    'opacity': '1',
+                    'visibility': 'visible'
+                });
+            }
+
+            refreshAnimation($wizard, index);
+        }
+    });
+
+    // Prepare the preview for profile picture
+    $("#wizard-picture").change(function () {
+        readURL(this);
+    });
+
+    $('[data-toggle="wizard-radio"]').click(function () {
+        wizard = $(this).closest('.wizard-card');
+        wizard.find('[data-toggle="wizard-radio"]').removeClass('active');
+        $(this).addClass('active');
+        $(wizard).find('[type="radio"]').removeAttr('checked');
+        $(this).find('[type="radio"]').attr('checked', 'true');
+    });
+
+    $('[data-toggle="wizard-checkbox"]').click(function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).find('[type="checkbox"]').removeAttr('checked');
+        } else {
+            $(this).addClass('active');
+            $(this).find('[type="checkbox"]').attr('checked', 'true');
+        }
+    });
+
+    $('.set-full-height').css('height', 'auto');
+});
+
+//Function to show image before upload
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$(window).resize(function () {
+    $('.wizard-card').each(function () {
+        $wizard = $(this);
+        index = $wizard.bootstrapWizard('currentIndex');
+        refreshAnimation($wizard, index);
+
+        $('.moving-tab').css({
+            'transition': 'transform 0s'
+        });
+    });
+});
+
+function refreshAnimation($wizard, index) {
+    total_steps = $wizard.find('li').length;
+    move_distance = $wizard.width() / total_steps;
+    step_width = move_distance;
+    move_distance *= index;
+
+    $current = index + 1;
+
+    if ($current == 1) {
+        move_distance -= 8;
+    } else if ($current == total_steps) {
+        move_distance += 8;
+    }
+
+    $wizard.find('.moving-tab').css('width', step_width);
+    $('.moving-tab').css({
+        'transform': 'translate3d(' + move_distance + 'px, 0, 0)',
+        'transition': 'all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1)'
+
+    });
+}
+
+materialDesign = {
+
+    checkScrollForTransparentNavbar: debounce(function () {
+        if ($(document).scrollTop() > 260) {
+            if (transparent) {
+                transparent = false;
+                $('.navbar-color-on-scroll').removeClass('navbar-transparent');
+            }
+        } else {
+            if (!transparent) {
+                transparent = true;
+                $('.navbar-color-on-scroll').addClass('navbar-transparent');
+            }
+        }
+    }, 17)
+
+};
+
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function () {
+        var context = this,
+            args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        }, wait);
+        if (immediate && !timeout) func.apply(context, args);
+    };
+};
+
+(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments);
+    }, i[r].l = 1 * new Date();a = s.createElement(o), m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m);
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+ga('create', 'UA-46172202-1', 'auto');
+ga('send', 'pageview');
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(22)))
+
+/***/ }),
+/* 194 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+/*! jQuery Validation Plugin - v1.14.0 - 6/30/2015
+ * http://jqueryvalidation.org/
+ * Copyright (c) 2015 Jörn Zaefferer; Licensed MIT */
+!function (a) {
+   true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(22)], __WEBPACK_AMD_DEFINE_FACTORY__ = (a),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : a(jQuery);
+}(function (a) {
+  a.extend(a.fn, { validate: function validate(b) {
+      if (!this.length) return void (b && b.debug && window.console && console.warn("Nothing selected, can't validate, returning nothing."));var c = a.data(this[0], "validator");return c ? c : (this.attr("novalidate", "novalidate"), c = new a.validator(b, this[0]), a.data(this[0], "validator", c), c.settings.onsubmit && (this.on("click.validate", ":submit", function (b) {
+        c.settings.submitHandler && (c.submitButton = b.target), a(this).hasClass("cancel") && (c.cancelSubmit = !0), void 0 !== a(this).attr("formnovalidate") && (c.cancelSubmit = !0);
+      }), this.on("submit.validate", function (b) {
+        function d() {
+          var d, e;return c.settings.submitHandler ? (c.submitButton && (d = a("<input type='hidden'/>").attr("name", c.submitButton.name).val(a(c.submitButton).val()).appendTo(c.currentForm)), e = c.settings.submitHandler.call(c, c.currentForm, b), c.submitButton && d.remove(), void 0 !== e ? e : !1) : !0;
+        }return c.settings.debug && b.preventDefault(), c.cancelSubmit ? (c.cancelSubmit = !1, d()) : c.form() ? c.pendingRequest ? (c.formSubmitted = !0, !1) : d() : (c.focusInvalid(), !1);
+      })), c);
+    }, valid: function valid() {
+      var b, c, d;return a(this[0]).is("form") ? b = this.validate().form() : (d = [], b = !0, c = a(this[0].form).validate(), this.each(function () {
+        b = c.element(this) && b, d = d.concat(c.errorList);
+      }), c.errorList = d), b;
+    }, rules: function rules(b, c) {
+      var d,
+          e,
+          f,
+          g,
+          h,
+          i,
+          j = this[0];if (b) switch (d = a.data(j.form, "validator").settings, e = d.rules, f = a.validator.staticRules(j), b) {case "add":
+          a.extend(f, a.validator.normalizeRule(c)), delete f.messages, e[j.name] = f, c.messages && (d.messages[j.name] = a.extend(d.messages[j.name], c.messages));break;case "remove":
+          return c ? (i = {}, a.each(c.split(/\s/), function (b, c) {
+            i[c] = f[c], delete f[c], "required" === c && a(j).removeAttr("aria-required");
+          }), i) : (delete e[j.name], f);}return g = a.validator.normalizeRules(a.extend({}, a.validator.classRules(j), a.validator.attributeRules(j), a.validator.dataRules(j), a.validator.staticRules(j)), j), g.required && (h = g.required, delete g.required, g = a.extend({ required: h }, g), a(j).attr("aria-required", "true")), g.remote && (h = g.remote, delete g.remote, g = a.extend(g, { remote: h })), g;
+    } }), a.extend(a.expr[":"], { blank: function blank(b) {
+      return !a.trim("" + a(b).val());
+    }, filled: function filled(b) {
+      return !!a.trim("" + a(b).val());
+    }, unchecked: function unchecked(b) {
+      return !a(b).prop("checked");
+    } }), a.validator = function (b, c) {
+    this.settings = a.extend(!0, {}, a.validator.defaults, b), this.currentForm = c, this.init();
+  }, a.validator.format = function (b, c) {
+    return 1 === arguments.length ? function () {
+      var c = a.makeArray(arguments);return c.unshift(b), a.validator.format.apply(this, c);
+    } : (arguments.length > 2 && c.constructor !== Array && (c = a.makeArray(arguments).slice(1)), c.constructor !== Array && (c = [c]), a.each(c, function (a, c) {
+      b = b.replace(new RegExp("\\{" + a + "\\}", "g"), function () {
+        return c;
+      });
+    }), b);
+  }, a.extend(a.validator, { defaults: { messages: {}, groups: {}, rules: {}, errorClass: "error", validClass: "valid", errorElement: "label", focusCleanup: !1, focusInvalid: !0, errorContainer: a([]), errorLabelContainer: a([]), onsubmit: !0, ignore: ":hidden", ignoreTitle: !1, onfocusin: function onfocusin(a) {
+        this.lastActive = a, this.settings.focusCleanup && (this.settings.unhighlight && this.settings.unhighlight.call(this, a, this.settings.errorClass, this.settings.validClass), this.hideThese(this.errorsFor(a)));
+      }, onfocusout: function onfocusout(a) {
+        this.checkable(a) || !(a.name in this.submitted) && this.optional(a) || this.element(a);
+      }, onkeyup: function onkeyup(b, c) {
+        var d = [16, 17, 18, 20, 35, 36, 37, 38, 39, 40, 45, 144, 225];9 === c.which && "" === this.elementValue(b) || -1 !== a.inArray(c.keyCode, d) || (b.name in this.submitted || b === this.lastElement) && this.element(b);
+      }, onclick: function onclick(a) {
+        a.name in this.submitted ? this.element(a) : a.parentNode.name in this.submitted && this.element(a.parentNode);
+      }, highlight: function highlight(b, c, d) {
+        "radio" === b.type ? this.findByName(b.name).addClass(c).removeClass(d) : a(b).addClass(c).removeClass(d);
+      }, unhighlight: function unhighlight(b, c, d) {
+        "radio" === b.type ? this.findByName(b.name).removeClass(c).addClass(d) : a(b).removeClass(c).addClass(d);
+      } }, setDefaults: function setDefaults(b) {
+      a.extend(a.validator.defaults, b);
+    }, messages: { required: "This field is required.", remote: "Please fix this field.", email: "Please enter a valid email address.", url: "Please enter a valid URL.", date: "Please enter a valid date.", dateISO: "Please enter a valid date ( ISO ).", number: "Please enter a valid number.", digits: "Please enter only digits.", creditcard: "Please enter a valid credit card number.", equalTo: "Please enter the same value again.", maxlength: a.validator.format("Please enter no more than {0} characters."), minlength: a.validator.format("Please enter at least {0} characters."), rangelength: a.validator.format("Please enter a value between {0} and {1} characters long."), range: a.validator.format("Please enter a value between {0} and {1}."), max: a.validator.format("Please enter a value less than or equal to {0}."), min: a.validator.format("Please enter a value greater than or equal to {0}.") }, autoCreateRanges: !1, prototype: { init: function init() {
+        function b(b) {
+          var c = a.data(this.form, "validator"),
+              d = "on" + b.type.replace(/^validate/, ""),
+              e = c.settings;e[d] && !a(this).is(e.ignore) && e[d].call(c, this, b);
+        }this.labelContainer = a(this.settings.errorLabelContainer), this.errorContext = this.labelContainer.length && this.labelContainer || a(this.currentForm), this.containers = a(this.settings.errorContainer).add(this.settings.errorLabelContainer), this.submitted = {}, this.valueCache = {}, this.pendingRequest = 0, this.pending = {}, this.invalid = {}, this.reset();var c,
+            d = this.groups = {};a.each(this.settings.groups, function (b, c) {
+          "string" == typeof c && (c = c.split(/\s/)), a.each(c, function (a, c) {
+            d[c] = b;
+          });
+        }), c = this.settings.rules, a.each(c, function (b, d) {
+          c[b] = a.validator.normalizeRule(d);
+        }), a(this.currentForm).on("focusin.validate focusout.validate keyup.validate", ":text, [type='password'], [type='file'], select, textarea, [type='number'], [type='search'], [type='tel'], [type='url'], [type='email'], [type='datetime'], [type='date'], [type='month'], [type='week'], [type='time'], [type='datetime-local'], [type='range'], [type='color'], [type='radio'], [type='checkbox']", b).on("click.validate", "select, option, [type='radio'], [type='checkbox']", b), this.settings.invalidHandler && a(this.currentForm).on("invalid-form.validate", this.settings.invalidHandler), a(this.currentForm).find("[required], [data-rule-required], .required").attr("aria-required", "true");
+      }, form: function form() {
+        return this.checkForm(), a.extend(this.submitted, this.errorMap), this.invalid = a.extend({}, this.errorMap), this.valid() || a(this.currentForm).triggerHandler("invalid-form", [this]), this.showErrors(), this.valid();
+      }, checkForm: function checkForm() {
+        this.prepareForm();for (var a = 0, b = this.currentElements = this.elements(); b[a]; a++) {
+          this.check(b[a]);
+        }return this.valid();
+      }, element: function element(b) {
+        var c = this.clean(b),
+            d = this.validationTargetFor(c),
+            e = !0;return this.lastElement = d, void 0 === d ? delete this.invalid[c.name] : (this.prepareElement(d), this.currentElements = a(d), e = this.check(d) !== !1, e ? delete this.invalid[d.name] : this.invalid[d.name] = !0), a(b).attr("aria-invalid", !e), this.numberOfInvalids() || (this.toHide = this.toHide.add(this.containers)), this.showErrors(), e;
+      }, showErrors: function showErrors(b) {
+        if (b) {
+          a.extend(this.errorMap, b), this.errorList = [];for (var c in b) {
+            this.errorList.push({ message: b[c], element: this.findByName(c)[0] });
+          }this.successList = a.grep(this.successList, function (a) {
+            return !(a.name in b);
+          });
+        }this.settings.showErrors ? this.settings.showErrors.call(this, this.errorMap, this.errorList) : this.defaultShowErrors();
+      }, resetForm: function resetForm() {
+        a.fn.resetForm && a(this.currentForm).resetForm(), this.submitted = {}, this.lastElement = null, this.prepareForm(), this.hideErrors();var b,
+            c = this.elements().removeData("previousValue").removeAttr("aria-invalid");if (this.settings.unhighlight) for (b = 0; c[b]; b++) {
+          this.settings.unhighlight.call(this, c[b], this.settings.errorClass, "");
+        } else c.removeClass(this.settings.errorClass);
+      }, numberOfInvalids: function numberOfInvalids() {
+        return this.objectLength(this.invalid);
+      }, objectLength: function objectLength(a) {
+        var b,
+            c = 0;for (b in a) {
+          c++;
+        }return c;
+      }, hideErrors: function hideErrors() {
+        this.hideThese(this.toHide);
+      }, hideThese: function hideThese(a) {
+        a.not(this.containers).text(""), this.addWrapper(a).hide();
+      }, valid: function valid() {
+        return 0 === this.size();
+      }, size: function size() {
+        return this.errorList.length;
+      }, focusInvalid: function focusInvalid() {
+        if (this.settings.focusInvalid) try {
+          a(this.findLastActive() || this.errorList.length && this.errorList[0].element || []).filter(":visible").focus().trigger("focusin");
+        } catch (b) {}
+      }, findLastActive: function findLastActive() {
+        var b = this.lastActive;return b && 1 === a.grep(this.errorList, function (a) {
+          return a.element.name === b.name;
+        }).length && b;
+      }, elements: function elements() {
+        var b = this,
+            c = {};return a(this.currentForm).find("input, select, textarea").not(":submit, :reset, :image, :disabled").not(this.settings.ignore).filter(function () {
+          return !this.name && b.settings.debug && window.console && console.error("%o has no name assigned", this), this.name in c || !b.objectLength(a(this).rules()) ? !1 : (c[this.name] = !0, !0);
+        });
+      }, clean: function clean(b) {
+        return a(b)[0];
+      }, errors: function errors() {
+        var b = this.settings.errorClass.split(" ").join(".");return a(this.settings.errorElement + "." + b, this.errorContext);
+      }, reset: function reset() {
+        this.successList = [], this.errorList = [], this.errorMap = {}, this.toShow = a([]), this.toHide = a([]), this.currentElements = a([]);
+      }, prepareForm: function prepareForm() {
+        this.reset(), this.toHide = this.errors().add(this.containers);
+      }, prepareElement: function prepareElement(a) {
+        this.reset(), this.toHide = this.errorsFor(a);
+      }, elementValue: function elementValue(b) {
+        var c,
+            d = a(b),
+            e = b.type;return "radio" === e || "checkbox" === e ? this.findByName(b.name).filter(":checked").val() : "number" === e && "undefined" != typeof b.validity ? b.validity.badInput ? !1 : d.val() : (c = d.val(), "string" == typeof c ? c.replace(/\r/g, "") : c);
+      }, check: function check(b) {
+        b = this.validationTargetFor(this.clean(b));var c,
+            d,
+            e,
+            f = a(b).rules(),
+            g = a.map(f, function (a, b) {
+          return b;
+        }).length,
+            h = !1,
+            i = this.elementValue(b);for (d in f) {
+          e = { method: d, parameters: f[d] };try {
+            if (c = a.validator.methods[d].call(this, i, b, e.parameters), "dependency-mismatch" === c && 1 === g) {
+              h = !0;continue;
+            }if (h = !1, "pending" === c) return void (this.toHide = this.toHide.not(this.errorsFor(b)));if (!c) return this.formatAndAdd(b, e), !1;
+          } catch (j) {
+            throw this.settings.debug && window.console && console.log("Exception occurred when checking element " + b.id + ", check the '" + e.method + "' method.", j), j instanceof TypeError && (j.message += ".  Exception occurred when checking element " + b.id + ", check the '" + e.method + "' method."), j;
+          }
+        }if (!h) return this.objectLength(f) && this.successList.push(b), !0;
+      }, customDataMessage: function customDataMessage(b, c) {
+        return a(b).data("msg" + c.charAt(0).toUpperCase() + c.substring(1).toLowerCase()) || a(b).data("msg");
+      }, customMessage: function customMessage(a, b) {
+        var c = this.settings.messages[a];return c && (c.constructor === String ? c : c[b]);
+      }, findDefined: function findDefined() {
+        for (var a = 0; a < arguments.length; a++) {
+          if (void 0 !== arguments[a]) return arguments[a];
+        }return void 0;
+      }, defaultMessage: function defaultMessage(b, c) {
+        return this.findDefined(this.customMessage(b.name, c), this.customDataMessage(b, c), !this.settings.ignoreTitle && b.title || void 0, a.validator.messages[c], "<strong>Warning: No message defined for " + b.name + "</strong>");
+      }, formatAndAdd: function formatAndAdd(b, c) {
+        var d = this.defaultMessage(b, c.method),
+            e = /\$?\{(\d+)\}/g;"function" == typeof d ? d = d.call(this, c.parameters, b) : e.test(d) && (d = a.validator.format(d.replace(e, "{$1}"), c.parameters)), this.errorList.push({ message: d, element: b, method: c.method }), this.errorMap[b.name] = d, this.submitted[b.name] = d;
+      }, addWrapper: function addWrapper(a) {
+        return this.settings.wrapper && (a = a.add(a.parent(this.settings.wrapper))), a;
+      }, defaultShowErrors: function defaultShowErrors() {
+        var a, b, c;for (a = 0; this.errorList[a]; a++) {
+          c = this.errorList[a], this.settings.highlight && this.settings.highlight.call(this, c.element, this.settings.errorClass, this.settings.validClass), this.showLabel(c.element, c.message);
+        }if (this.errorList.length && (this.toShow = this.toShow.add(this.containers)), this.settings.success) for (a = 0; this.successList[a]; a++) {
+          this.showLabel(this.successList[a]);
+        }if (this.settings.unhighlight) for (a = 0, b = this.validElements(); b[a]; a++) {
+          this.settings.unhighlight.call(this, b[a], this.settings.errorClass, this.settings.validClass);
+        }this.toHide = this.toHide.not(this.toShow), this.hideErrors(), this.addWrapper(this.toShow).show();
+      }, validElements: function validElements() {
+        return this.currentElements.not(this.invalidElements());
+      }, invalidElements: function invalidElements() {
+        return a(this.errorList).map(function () {
+          return this.element;
+        });
+      }, showLabel: function showLabel(b, c) {
+        var d,
+            e,
+            f,
+            g = this.errorsFor(b),
+            h = this.idOrName(b),
+            i = a(b).attr("aria-describedby");g.length ? (g.removeClass(this.settings.validClass).addClass(this.settings.errorClass), g.html(c)) : (g = a("<" + this.settings.errorElement + ">").attr("id", h + "-error").addClass(this.settings.errorClass).html(c || ""), d = g, this.settings.wrapper && (d = g.hide().show().wrap("<" + this.settings.wrapper + "/>").parent()), this.labelContainer.length ? this.labelContainer.append(d) : this.settings.errorPlacement ? this.settings.errorPlacement(d, a(b)) : d.insertAfter(b), g.is("label") ? g.attr("for", h) : 0 === g.parents("label[for='" + h + "']").length && (f = g.attr("id").replace(/(:|\.|\[|\]|\$)/g, "\\$1"), i ? i.match(new RegExp("\\b" + f + "\\b")) || (i += " " + f) : i = f, a(b).attr("aria-describedby", i), e = this.groups[b.name], e && a.each(this.groups, function (b, c) {
+          c === e && a("[name='" + b + "']", this.currentForm).attr("aria-describedby", g.attr("id"));
+        }))), !c && this.settings.success && (g.text(""), "string" == typeof this.settings.success ? g.addClass(this.settings.success) : this.settings.success(g, b)), this.toShow = this.toShow.add(g);
+      }, errorsFor: function errorsFor(b) {
+        var c = this.idOrName(b),
+            d = a(b).attr("aria-describedby"),
+            e = "label[for='" + c + "'], label[for='" + c + "'] *";return d && (e = e + ", #" + d.replace(/\s+/g, ", #")), this.errors().filter(e);
+      }, idOrName: function idOrName(a) {
+        return this.groups[a.name] || (this.checkable(a) ? a.name : a.id || a.name);
+      }, validationTargetFor: function validationTargetFor(b) {
+        return this.checkable(b) && (b = this.findByName(b.name)), a(b).not(this.settings.ignore)[0];
+      }, checkable: function checkable(a) {
+        return (/radio|checkbox/i.test(a.type)
+        );
+      }, findByName: function findByName(b) {
+        return a(this.currentForm).find("[name='" + b + "']");
+      }, getLength: function getLength(b, c) {
+        switch (c.nodeName.toLowerCase()) {case "select":
+            return a("option:selected", c).length;case "input":
+            if (this.checkable(c)) return this.findByName(c.name).filter(":checked").length;}return b.length;
+      }, depend: function depend(a, b) {
+        return this.dependTypes[typeof a === "undefined" ? "undefined" : _typeof(a)] ? this.dependTypes[typeof a === "undefined" ? "undefined" : _typeof(a)](a, b) : !0;
+      }, dependTypes: { "boolean": function boolean(a) {
+          return a;
+        }, string: function string(b, c) {
+          return !!a(b, c.form).length;
+        }, "function": function _function(a, b) {
+          return a(b);
+        } }, optional: function optional(b) {
+        var c = this.elementValue(b);return !a.validator.methods.required.call(this, c, b) && "dependency-mismatch";
+      }, startRequest: function startRequest(a) {
+        this.pending[a.name] || (this.pendingRequest++, this.pending[a.name] = !0);
+      }, stopRequest: function stopRequest(b, c) {
+        this.pendingRequest--, this.pendingRequest < 0 && (this.pendingRequest = 0), delete this.pending[b.name], c && 0 === this.pendingRequest && this.formSubmitted && this.form() ? (a(this.currentForm).submit(), this.formSubmitted = !1) : !c && 0 === this.pendingRequest && this.formSubmitted && (a(this.currentForm).triggerHandler("invalid-form", [this]), this.formSubmitted = !1);
+      }, previousValue: function previousValue(b) {
+        return a.data(b, "previousValue") || a.data(b, "previousValue", { old: null, valid: !0, message: this.defaultMessage(b, "remote") });
+      }, destroy: function destroy() {
+        this.resetForm(), a(this.currentForm).off(".validate").removeData("validator");
+      } }, classRuleSettings: { required: { required: !0 }, email: { email: !0 }, url: { url: !0 }, date: { date: !0 }, dateISO: { dateISO: !0 }, number: { number: !0 }, digits: { digits: !0 }, creditcard: { creditcard: !0 } }, addClassRules: function addClassRules(b, c) {
+      b.constructor === String ? this.classRuleSettings[b] = c : a.extend(this.classRuleSettings, b);
+    }, classRules: function classRules(b) {
+      var c = {},
+          d = a(b).attr("class");return d && a.each(d.split(" "), function () {
+        this in a.validator.classRuleSettings && a.extend(c, a.validator.classRuleSettings[this]);
+      }), c;
+    }, normalizeAttributeRule: function normalizeAttributeRule(a, b, c, d) {
+      /min|max/.test(c) && (null === b || /number|range|text/.test(b)) && (d = Number(d), isNaN(d) && (d = void 0)), d || 0 === d ? a[c] = d : b === c && "range" !== b && (a[c] = !0);
+    }, attributeRules: function attributeRules(b) {
+      var c,
+          d,
+          e = {},
+          f = a(b),
+          g = b.getAttribute("type");for (c in a.validator.methods) {
+        "required" === c ? (d = b.getAttribute(c), "" === d && (d = !0), d = !!d) : d = f.attr(c), this.normalizeAttributeRule(e, g, c, d);
+      }return e.maxlength && /-1|2147483647|524288/.test(e.maxlength) && delete e.maxlength, e;
+    }, dataRules: function dataRules(b) {
+      var c,
+          d,
+          e = {},
+          f = a(b),
+          g = b.getAttribute("type");for (c in a.validator.methods) {
+        d = f.data("rule" + c.charAt(0).toUpperCase() + c.substring(1).toLowerCase()), this.normalizeAttributeRule(e, g, c, d);
+      }return e;
+    }, staticRules: function staticRules(b) {
+      var c = {},
+          d = a.data(b.form, "validator");return d.settings.rules && (c = a.validator.normalizeRule(d.settings.rules[b.name]) || {}), c;
+    }, normalizeRules: function normalizeRules(b, c) {
+      return a.each(b, function (d, e) {
+        if (e === !1) return void delete b[d];if (e.param || e.depends) {
+          var f = !0;switch (_typeof(e.depends)) {case "string":
+              f = !!a(e.depends, c.form).length;break;case "function":
+              f = e.depends.call(c, c);}f ? b[d] = void 0 !== e.param ? e.param : !0 : delete b[d];
+        }
+      }), a.each(b, function (d, e) {
+        b[d] = a.isFunction(e) ? e(c) : e;
+      }), a.each(["minlength", "maxlength"], function () {
+        b[this] && (b[this] = Number(b[this]));
+      }), a.each(["rangelength", "range"], function () {
+        var c;b[this] && (a.isArray(b[this]) ? b[this] = [Number(b[this][0]), Number(b[this][1])] : "string" == typeof b[this] && (c = b[this].replace(/[\[\]]/g, "").split(/[\s,]+/), b[this] = [Number(c[0]), Number(c[1])]));
+      }), a.validator.autoCreateRanges && (null != b.min && null != b.max && (b.range = [b.min, b.max], delete b.min, delete b.max), null != b.minlength && null != b.maxlength && (b.rangelength = [b.minlength, b.maxlength], delete b.minlength, delete b.maxlength)), b;
+    }, normalizeRule: function normalizeRule(b) {
+      if ("string" == typeof b) {
+        var c = {};a.each(b.split(/\s/), function () {
+          c[this] = !0;
+        }), b = c;
+      }return b;
+    }, addMethod: function addMethod(b, c, d) {
+      a.validator.methods[b] = c, a.validator.messages[b] = void 0 !== d ? d : a.validator.messages[b], c.length < 3 && a.validator.addClassRules(b, a.validator.normalizeRule(b));
+    }, methods: { required: function required(b, c, d) {
+        if (!this.depend(d, c)) return "dependency-mismatch";if ("select" === c.nodeName.toLowerCase()) {
+          var e = a(c).val();return e && e.length > 0;
+        }return this.checkable(c) ? this.getLength(b, c) > 0 : b.length > 0;
+      }, email: function email(a, b) {
+        return this.optional(b) || /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(a);
+      }, url: function url(a, b) {
+        return this.optional(b) || /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})).?)(?::\d{2,5})?(?:[/?#]\S*)?$/i.test(a);
+      }, date: function date(a, b) {
+        return this.optional(b) || !/Invalid|NaN/.test(new Date(a).toString());
+      }, dateISO: function dateISO(a, b) {
+        return this.optional(b) || /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/.test(a);
+      }, number: function number(a, b) {
+        return this.optional(b) || /^(?:-?\d+|-?\d{1,3}(?:,\d{3})+)?(?:\.\d+)?$/.test(a);
+      }, digits: function digits(a, b) {
+        return this.optional(b) || /^\d+$/.test(a);
+      }, creditcard: function creditcard(a, b) {
+        if (this.optional(b)) return "dependency-mismatch";if (/[^0-9 \-]+/.test(a)) return !1;var c,
+            d,
+            e = 0,
+            f = 0,
+            g = !1;if (a = a.replace(/\D/g, ""), a.length < 13 || a.length > 19) return !1;for (c = a.length - 1; c >= 0; c--) {
+          d = a.charAt(c), f = parseInt(d, 10), g && (f *= 2) > 9 && (f -= 9), e += f, g = !g;
+        }return e % 10 === 0;
+      }, minlength: function minlength(b, c, d) {
+        var e = a.isArray(b) ? b.length : this.getLength(b, c);return this.optional(c) || e >= d;
+      }, maxlength: function maxlength(b, c, d) {
+        var e = a.isArray(b) ? b.length : this.getLength(b, c);return this.optional(c) || d >= e;
+      }, rangelength: function rangelength(b, c, d) {
+        var e = a.isArray(b) ? b.length : this.getLength(b, c);return this.optional(c) || e >= d[0] && e <= d[1];
+      }, min: function min(a, b, c) {
+        return this.optional(b) || a >= c;
+      }, max: function max(a, b, c) {
+        return this.optional(b) || c >= a;
+      }, range: function range(a, b, c) {
+        return this.optional(b) || a >= c[0] && a <= c[1];
+      }, equalTo: function equalTo(b, c, d) {
+        var e = a(d);return this.settings.onfocusout && e.off(".validate-equalTo").on("blur.validate-equalTo", function () {
+          a(c).valid();
+        }), b === e.val();
+      }, remote: function remote(b, c, d) {
+        if (this.optional(c)) return "dependency-mismatch";var e,
+            f,
+            g = this.previousValue(c);return this.settings.messages[c.name] || (this.settings.messages[c.name] = {}), g.originalMessage = this.settings.messages[c.name].remote, this.settings.messages[c.name].remote = g.message, d = "string" == typeof d && { url: d } || d, g.old === b ? g.valid : (g.old = b, e = this, this.startRequest(c), f = {}, f[c.name] = b, a.ajax(a.extend(!0, { mode: "abort", port: "validate" + c.name, dataType: "json", data: f, context: e.currentForm, success: function success(d) {
+            var f,
+                h,
+                i,
+                j = d === !0 || "true" === d;e.settings.messages[c.name].remote = g.originalMessage, j ? (i = e.formSubmitted, e.prepareElement(c), e.formSubmitted = i, e.successList.push(c), delete e.invalid[c.name], e.showErrors()) : (f = {}, h = d || e.defaultMessage(c, "remote"), f[c.name] = g.message = a.isFunction(h) ? h(b) : h, e.invalid[c.name] = !0, e.showErrors(f)), g.valid = j, e.stopRequest(c, j);
+          } }, d)), "pending");
+      } } });var b,
+      c = {};a.ajaxPrefilter ? a.ajaxPrefilter(function (a, b, d) {
+    var e = a.port;"abort" === a.mode && (c[e] && c[e].abort(), c[e] = d);
+  }) : (b = a.ajax, a.ajax = function (d) {
+    var e = ("mode" in d ? d : a.ajaxSettings).mode,
+        f = ("port" in d ? d : a.ajaxSettings).port;return "abort" === e ? (c[f] && c[f].abort(), c[f] = b.apply(this, arguments), c[f]) : b.apply(this, arguments);
+  });
+});
 
 /***/ })
 /******/ ]);
