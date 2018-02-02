@@ -178,7 +178,7 @@ if (window.location.href.indexOf('.visual.force.com/') >= 0) {
         element.parentNode.removeChild(element);
     });
     document.getElementsByTagName('body')[0].innerHTML = '<div id="root"></div>';
-    load.js('https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/scripts/app.bundle.js').catch(function (err) {
+    load.js('https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/app.bundle.js').catch(function (err) {
         console.error('Error', err);
     });
 }
