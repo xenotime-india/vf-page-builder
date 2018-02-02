@@ -138,8 +138,9 @@ gulp.task('outsideExtension-styles', function() {
 // 	return gulp.src('src/styles/**/*.css')
 // 		.pipe(minifycss({root: 'src/styles', keepSpecialComments: 0}))
 // 		.pipe(gulp.dest('build/styles'));
-    return gulp.src('outsideExtension/src/styles/**')
+    return gulp.src('outsideExtension/src/styles/*.css')
         .pipe(minifycss({root: 'outsideExtension/src/styles', keepSpecialComments: 0}))
+        .pipe(rename({ extname: '.min.css' }))
         .pipe(gulp.dest('outsideExtension/build/styles'));
 });
 
