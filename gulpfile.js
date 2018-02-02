@@ -6,7 +6,6 @@ const gulp = require('gulp'),
     clean = require('gulp-clean'),
     cleanhtml = require('gulp-cleanhtml'),
     minifycss = require('gulp-minify-css'),
-    jshint = require('gulp-jshint'),
     stripdebug = require('gulp-strip-debug'),
     uglify = require('gulp-uglify'),
     zip = require('gulp-zip'),
@@ -39,15 +38,8 @@ gulp.task('insideExtension-html', function() {
         .pipe(gulp.dest('insideExtension/build'));
 });
 
-//run scripts through JSHint
-gulp.task('insideExtension-jshint', function() {
-    return gulp.src('insideExtension/src/scripts/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
-});
-
 //copy vendor scripts and uglify all other scripts, creating source maps
-gulp.task('insideExtension-scripts', ['insideExtension-jshint'], function() {
+gulp.task('insideExtension-scripts', [], function() {
     gulp.src('insideExtension/src/scripts/vendors/**/*.js')
         .pipe(gulp.dest('insideExtension/build/scripts/vendors'));
     return gulp.src(['insideExtension/src/scripts/**/*.js', '!insideExtension/src/scripts/vendors/**/*.js'])
