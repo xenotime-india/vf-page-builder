@@ -67,13 +67,13 @@ var filesToLoad = [
         url:"https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js",
         type:'js',
     },{
-        url:"https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/scripts/jquery.bootstrap.js",
+        url:"https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/scripts/vendors/jquery.bootstrap.js",
         type:'js',
     },{
-        url:"https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/scripts/material-bootstrap-wizard.js",
+        url:"https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/scripts/vendors/material-bootstrap-wizard.js",
         type:'js',
     },{
-        url:"https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/scripts/jquery.validate.min.js",
+        url:"https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/scripts/vendors/jquery.validate.min.js",
         type:'js',
     },{
         url:"https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/scripts/helper.min.js",
