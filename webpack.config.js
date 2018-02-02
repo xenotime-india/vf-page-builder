@@ -1,13 +1,26 @@
-var path = require('path');
-var webpack = require('webpack');
+const { resolve } = require('path');
+
+const webpack = require('webpack');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+
 module.exports = {
-    entry: {
-        app: './outsideExtension/src/scripts/app.js',
-        onload: './outsideExtension/src/scripts/onload.js'
-    },
+    devtool: 'cheap-module-eval-source-map',
+    entry: [
+        'react-hot-loader/patch',
+        'webpack-dev-server/client?http://localhost:8080',
+        'webpack/hot/only-dev-server',
+        './src/scripts/app.js'
+    ],
     output: {
-        path: path.resolve(__dirname,'outsideExtension' ,'build'),
-        filename: '[name].bundle.js'
+        path: resolve(__dirname ,'outsideExtension','build'),
+        filename: 'app.bundle.js'
+    },
+    context: resolve(__dirname, 'outsideExtension'),
+
+    devServer: {
+        hot: true,
+        contentBase: resolve(__dirname, 'outsideExtension','build'),
+        publicPath: '/'
     },
     module: {
         loaders: [
@@ -17,23 +30,26 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['es2015', 'react']
-                }
+                loader: 'babel-loader'
             },
             { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' }
         ]
     },
     plugins: [
-        new webpack.ProvidePlugin({
-            '$': 'jquery',
-            'jQuery': 'jquery',
-            'window.jQuery': 'jquery'
-        })
+        new webpack.LoaderOptionsPlugin({
+            test: /\.js$/,
+            options: {
+                eslint: {
+                    configFile: resolve(__dirname, '.eslintrc'),
+                    cache: false,
+                }
+            },
+        }),
+        new webpack.optimize.ModuleConcatenationPlugin(),
+        new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
+        new webpack.HotModuleReplacementPlugin(),
     ],
     stats: {
         colors: true
-    },
-    devtool: 'source-map'
+    }
 };

@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
+import './../styles/style.css';
+import Container from './container';
+import FormPage from './DashboardPage';
 
 import Promise from 'bluebird';
 import sforce from './sforce';
@@ -11,10 +14,9 @@ const connection = sforce();
 
 const App = () => (
     <MuiThemeProvider>
-        <AppBar
-            title="Title"
-            iconClassNameRight="muidocs-icon-navigation-expand-more"
-        />
+        <Container>
+            <FormPage/>
+        </Container>
     </MuiThemeProvider>
 );
 

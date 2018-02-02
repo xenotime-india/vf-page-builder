@@ -4,6 +4,6 @@ var EnhanceLibIsLoaded = true;
     var e = document.createElement('script');
     e.setAttribute('id', 'sb-script');
     e.setAttribute('mode', 'extension');
-    e.setAttribute('src', 'https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/onload.bundle.js');
+    e.setAttribute('src', 'https://xenotime-india.github.io/vf-page-builder/outsideExtension/dist/onload.bundle.js');
     document.body.appendChild(e);
 })();
