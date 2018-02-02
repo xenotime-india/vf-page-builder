@@ -1,5 +1,5 @@
 import Promise from 'bluebird';
-import $ from "jquery";
+window.jQuery = require('jquery');
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import sforce from './sforce';
