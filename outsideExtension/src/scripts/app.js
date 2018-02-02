@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AppBar from 'material-ui/AppBar';
 
 import Promise from 'bluebird';
 import sforce from './sforce';
@@ -7,8 +9,17 @@ import { showError, showLoading, hideLoading } from './helper';
 const apiVersion = '41.0';
 const connection = sforce();
 
+const App = () => (
+    <MuiThemeProvider>
+        <AppBar
+            title="Title"
+            iconClassNameRight="muidocs-icon-navigation-expand-more"
+        />
+    </MuiThemeProvider>
+);
+
 ReactDOM.render(
-    <h1>Hello, world!</h1>,
+    <App />,
     document.getElementById('root')
 );
 /*
