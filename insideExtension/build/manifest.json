@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "default_locale": "en",
+  "name": "Salesforce Deployment Helper",
+  "version": "3.8",
+  "description": "Facilitates SFDC Deployment functionality with searchable UI.",
+   "icons": { "16": "images/Cloud-icon.png",
+           "48": "images/Cloud-icon_48.png",
+          "128": "images/Cloud-icon_128.png" },
+  "browser_action": {
+    "default_icon": "images/Cloud-icon.png"
+  },
+  "background": {
+    "scripts": ["scripts/chromereload.min.js","scripts/background.min.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.salesforce.com/changemgmt/createOutboundChangeSet.apexp*",
+        "https://*.salesforce.com/changemgmt/outboundChangeSetDetailPage.apexp?id=*",
+        "https://*.salesforce.com/p/mfpkg/AddToPackageFromChangeMgmtUi*",
+        "https://*.salesforce.com/changemgmt/outboundChangeSetAddProfile.apexp?id=*"
+      ],
+      "js": [
+        "scripts/helper.min.js",
+        "scripts/contentscript.min.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "permissions": [
+    "https://*.salesforce.com/*",
+    "https://*.force.com/*",
+    "cookies",
+    "tabs"
+  ]
+}
