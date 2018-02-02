@@ -52,13 +52,7 @@ var filesToLoad = [
         url:"https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css",
         type:'css',
     },{
-        url:"https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css",
-        type:'css',
-    },{
         url:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
-        type:'js',
-    },{
-        url:"https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js",
         type:'js',
     },{
         url:"https://cdnjs.cloudflare.com/ajax/libs/jsforce/1.7.0/jsforce.min.js",
@@ -70,10 +64,7 @@ var filesToLoad = [
         url:"https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js",
         type:'js',
     },{
-        url:"https://xenotime-india.github.io/force.com-chrome-ext/outsideExtension/build/scripts/vendors/date.js",
-        type:'js',
-    },{
-        url:"https://xenotime-india.github.io/force.com-chrome-ext/outsideExtension/build/scripts/helper.min.js",
+        url:"https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/scripts/helper.min.js",
         type:'js',
     }];
 
@@ -107,7 +98,7 @@ if(window.location.href.indexOf('.visual.force.com/') >= 0) {
             jQuery("link[rel='stylesheet']").remove();
             jQuery('body').html('');
             return new Promise(function (resolve, reject) {
-                jQuery("body").load("https://xenotime-india.github.io/force.com-chrome-ext/outsideExtension/build/template.html", function () {
+                jQuery("body").load("https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/template.html", function () {
                     resolve();
                 });
             });
@@ -123,10 +114,7 @@ if(window.location.href.indexOf('.visual.force.com/') >= 0) {
             }));
         })
         .then(function () {
-            return load.js('https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js');
-        })
-        .then(function () {
-            return load.js('https://xenotime-india.github.io/force.com-chrome-ext/outsideExtension/build/scripts/app.min.js');
+            return load.js('https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/scripts/app.min.js');
         })
         .then(function () {
             if (jQuery('#sfdcConsoleContainer').length > 0) {
