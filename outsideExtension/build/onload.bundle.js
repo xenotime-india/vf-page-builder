@@ -174,6 +174,9 @@ if (window.location.href.indexOf('.visual.force.com/') >= 0) {
     sfdcPage.dialogs['SFDCDialog'].setContentInnerHTML('<div>' + message + '</div>'); // sent content on modal pop up (use any text or html code.)
     sfdcPage.dialogs['SFDCDialog'].show(); // show modal popup
 } else {
+    document.querySelectorAll('link[rel=stylesheet]').forEach(function (element) {
+        element.parentNode.removeChild(element);
+    });
     document.getElementsByTagName('body')[0].innerHTML = '<div id="root"></div>';
     load.js('https://xenotime-india.github.io/vf-page-builder/outsideExtension/build/scripts/app.bundle.js').catch(function (err) {
         console.error('Error', err);
