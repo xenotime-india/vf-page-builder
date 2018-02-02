@@ -21,13 +21,14 @@ class app {
             });
         })
         .then(() => {
-            showLoading();
+            //showLoading();
             return connection.metadata.list([{type: 'CustomObject', folder: null}], apiVersion);
         })
         .then((metadata) => {
             this.customObjects = metadata.map(function (item) {
                 return item.fullName;
             });
+            console.log(this.customObjects);
         })
         .catch(showError);
     }

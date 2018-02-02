@@ -34238,12 +34238,13 @@ var app = function () {
                     resolve();
                 });
             }).then(function () {
-                (0, _helper.showLoading)();
+                //showLoading();
                 return connection.metadata.list([{ type: 'CustomObject', folder: null }], apiVersion);
             }).then(function (metadata) {
                 _this.customObjects = metadata.map(function (item) {
                     return item.fullName;
                 });
+                console.log(_this.customObjects);
             }).catch(_helper.showError);
         }
     }]);
