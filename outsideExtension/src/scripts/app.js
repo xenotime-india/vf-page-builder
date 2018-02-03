@@ -1,24 +1,55 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import './../styles/style.css';
 import Container from './container';
-import FormPage from './DashboardPage';
+import DashboardPage from './DashboardPage';
+import {fetchCustomObjects} from "./api";
+import {showError} from "./util/helper";
+import Loader from './components/Loader';
 
-import Promise from 'bluebird';
-import sforce from './sforce';
-import { showError, showLoading, hideLoading } from './helper';
-const apiVersion = '41.0';
-const connection = sforce();
+const muiTheme = getMuiTheme({
+    palette: {
+        borderColor: '#d52b1e',
+        primary1Color: '#d52b1e',
+    },
+    datePicker: {
+        headerColor: '#d52b1e',
+        calendarYearBackgroundColor: '#FFF',
+        selectColor: '#d52b1e',
+    },
+});
 
-const App = () => (
-    <MuiThemeProvider>
-        <Container>
-            <FormPage/>
-        </Container>
-    </MuiThemeProvider>
-);
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            objects: [],
+            showLoading: false,
+        };
+    }
+
+    componentDidMount() {
+        fetchCustomObjects().then((metadata) => {
+            const customObjects = metadata.map(function (item) {
+                return item.fullName;
+            });
+            this.setState({objects: customObjects});
+        }).catch(showError);
+    }
+
+    render() {
+        return (
+            <MuiThemeProvider muiTheme={muiTheme}>
+                <Container>
+                    { this.state.showLoading && <Loader/> }
+                    <DashboardPage objects={this.state.objects} />
+                </Container>
+            </MuiThemeProvider>
+        )
+    }
+}
 
 ReactDOM.render(
     <App />,

@@ -1,18 +1,10 @@
-import React, { PropTypes } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import React from 'react';
 import Header from './components/Header';
 import withWidth, {LARGE, SMALL} from 'material-ui/utils/withWidth';
-import ThemeDefault from './theme-default';
 
 class Container extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
-        const paddingLeftDrawerOpen = 236;
-
         const styles = {
 
             container: {
@@ -22,14 +14,12 @@ class Container extends React.Component {
         };
 
         return (
-            <MuiThemeProvider muiTheme={ThemeDefault}>
-                <div>
-                    <Header styles={styles.header}/>
-                    <div style={styles.container}>
-                        {this.props.children}
-                    </div>
+            <div>
+                <Header/>
+                <div style={styles.container}>
+                    {this.props.children}
                 </div>
-            </MuiThemeProvider>
+            </div>
         );
     }
 }

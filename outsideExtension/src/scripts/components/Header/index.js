@@ -11,7 +11,7 @@ import {white} from 'material-ui/styles/colors';
 class Header extends React.Component {
 
     render() {
-        const {styles, handleChangeRequestNavDrawer} = this.props;
+        const {styles} = this.props;
 
         const style = {
             appBar: {
