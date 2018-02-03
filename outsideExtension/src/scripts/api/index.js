@@ -9,5 +9,5 @@ export function fetchCustomObjects() {
 
 export function fetchPageLayout(Object) {
     const connection = sforce();
-    return connection.tooling.sobject('Layout').find({ TableEnumOrId: Object }).execute();
+    return connection.tooling.sobject('Layout').describe();
 }

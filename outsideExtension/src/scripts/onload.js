@@ -1,20 +1,19 @@
 //create namespace and shared variables
 
-var load = (function() {
+const load = ((() => {
     // Function which returns a function: https://davidwalsh.name/javascript-functions
     function _load(tag) {
-        return function(url) {
-            // This promise will be used by Promise.all to determine success or failure
-            return new Promise(function(resolve, reject) {
-                var element = document.createElement(tag);
-                var parent = 'body';
-                var attr = 'src';
+        return url => // This promise will be used by Promise.all to determine success or failure
+            new Promise((resolve, reject) => {
+                const element = document.createElement(tag);
+                let parent = 'body';
+                let attr = 'src';
 
                 // Important success and error for the promise
-                element.onload = function() {
+                element.onload = () => {
                     resolve(url);
                 };
-                element.onerror = function() {
+                element.onerror = () => {
                     reject(url);
                 };
 
@@ -34,7 +33,6 @@ var load = (function() {
                 element[attr] = url;
                 document[parent].appendChild(element);
             });
-        };
     }
 
     return {
@@ -42,9 +40,9 @@ var load = (function() {
         js: _load('script'),
         img: _load('img')
     };
-})();
+}))();
 
-var filesToLoad = [
+const filesToLoad = [
     {
         url: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
         type: 'css',
@@ -77,7 +75,7 @@ var filesToLoad = [
         type:'js',
     }];
 
-if(window.location.href.indexOf('.visual.force.com/') >= 0) {
+if(window.location.href.includes('.visual.force.com/')) {
 
     if (sfdcPage.dialogs['SFDCDialog'] == null) { // checking if SFDCDialog modal popup already created on page.
 
@@ -98,16 +96,16 @@ if(window.location.href.indexOf('.visual.force.com/') >= 0) {
         sfdcPage.dialogs['SFDCDialog'].createDialog(); // finally call this method to create modal pop up  and append to current page.
 
     }
-    var message = '<table border="0"><tbody><tr><td style="vertical-align: top"><img src="/s.gif" class="warningLarge" alt="Warning"></td><td style="padding-left: 8px; vertical-align: top; line-height: 16px"><p>This extension can\'t execute in this page.</p><p>Navigate to <a href="/home/home.jsp">home page</a> and try again.</p></td></tr></tbody></table>'
-    sfdcPage.dialogs['SFDCDialog'].setContentInnerHTML('<div>' + message + '</div>'); // sent content on modal pop up (use any text or html code.)
+    const message = '<table border="0"><tbody><tr><td style="vertical-align: top"><img src="/s.gif" class="warningLarge" alt="Warning"></td><td style="padding-left: 8px; vertical-align: top; line-height: 16px"><p>This extension can\'t execute in this page.</p><p>Navigate to <a href="/home/home.jsp">home page</a> and try again.</p></td></tr></tbody></table>';
+    sfdcPage.dialogs['SFDCDialog'].setContentInnerHTML(`<div>${message}</div>`); // sent content on modal pop up (use any text or html code.)
     sfdcPage.dialogs['SFDCDialog'].show();// show modal popup
 } else {
-    document.querySelectorAll('link[rel=stylesheet]').forEach(function(element){
+    document.querySelectorAll('link[rel=stylesheet]').forEach(element => {
         element.parentNode.removeChild(element);
     });
     document.getElementsByTagName('body')[0].innerHTML = '<div id="root"></div>';
     load.js('https://xenotime-india.github.io/vf-page-builder/outsideExtension/dist/app.bundle.js')
-        .catch(function (err) {
+        .catch(err => {
             console.error('Error', err);
         });
 }
