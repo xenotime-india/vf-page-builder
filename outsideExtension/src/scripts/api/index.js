@@ -9,5 +9,5 @@ export function fetchCustomObjects() {
 
 export function fetchPageLayout(Object) {
     const connection = sforce();
-    return connection.query('SELECT FullName FROM Layout WHERE TableEnumOrId = \'' + Object + '\'');
+    return connection.tooling.sobject('Layout').find({ TableEnumOrId: Object }).execute();
 }
