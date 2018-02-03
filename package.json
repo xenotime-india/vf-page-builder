@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "clean": "rimraf outsideExtension/dist",
-    "production": "cross-env npm run clean && webpack --config webpack.production.config.js --progress --profile --colors",
+    "production": "cross-env npm run clean && webpack --config webpack.production.config.js --progress --profile --colors --env.production",
     "lint": "eslint ./outsideExtension/src/**/**.js"
   },
   "repository": {
