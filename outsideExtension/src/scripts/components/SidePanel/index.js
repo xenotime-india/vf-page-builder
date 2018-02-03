@@ -8,7 +8,7 @@ import DatePicker from 'material-ui/DatePicker';
 import {grey400} from 'material-ui/styles/colors';
 import Divider from 'material-ui/Divider';
 import PageBase from './../PageBase';
-import CustomObjectSelecter from './../CustomObjectSelecter';
+import Selecter from '../Selecter';
 
 const styles = {
     toggleDiv: {
@@ -29,67 +29,49 @@ const styles = {
     }
 };
 
-class SidePanel extends Component {
+const SidePanel = (props) => {
+    return (
+        <PageBase>
+            <form>
+                <Selecter objects={props.objects} selectedObject={props.selectedObject}
+                                      setObject={props.setObject} floatingLabelText="Custom Object" />
 
-    constructor(props, context) {
-        super(props, context);
-        this.state = {
-            objects: [],
-            selectedObject: null,
-        };
-    }
+                <Selecter objects={props.layouts} selectedObject={props.selectedLayout}
+                          setObject={props.setLayout} floatingLabelText="Layout"/>
+                <SelectField
+                    floatingLabelText="City"
+                    value=""
+                    fullWidth={true}>
+                    <MenuItem key={0} primaryText="London"/>
+                    <MenuItem key={1} primaryText="Paris"/>
+                    <MenuItem key={2} primaryText="Rome"/>
+                </SelectField>
 
-    setObject(object) {
-        this.setState({ selectedObject: object });
-    }
+                <DatePicker
+                    hintText="Expiration Date"
+                    floatingLabelText="Expiration Date"
+                    fullWidth={true}/>
 
-    render() {
-        const { objects } = this.props;
-        return (
-            <PageBase>
-                <form>
-
-                    <TextField
-                        hintText="Name"
-                        floatingLabelText="Name"
-                        fullWidth={true}
+                <div style={styles.toggleDiv}>
+                    <Toggle
+                        label="Disabled"
+                        labelStyle={styles.toggleLabel}
                     />
-                    <CustomObjectSelecter objects={objects} selectedObject={this.state.selectedObject} setObject={this.setObject.bind(this)} />
-                    <SelectField
-                        floatingLabelText="City"
-                        value=""
-                        fullWidth={true}>
-                        <MenuItem key={0} primaryText="London"/>
-                        <MenuItem key={1} primaryText="Paris"/>
-                        <MenuItem key={2} primaryText="Rome"/>
-                    </SelectField>
+                </div>
 
-                    <DatePicker
-                        hintText="Expiration Date"
-                        floatingLabelText="Expiration Date"
-                        fullWidth={true}/>
+                <Divider/>
 
-                    <div style={styles.toggleDiv}>
-                        <Toggle
-                            label="Disabled"
-                            labelStyle={styles.toggleLabel}
-                        />
-                    </div>
+                <div style={styles.buttons}>
+                    <RaisedButton label="Cancel"/>
 
-                    <Divider/>
-
-                    <div style={styles.buttons}>
-                        <RaisedButton label="Cancel"/>
-
-                        <RaisedButton label="Save"
-                                      style={styles.saveButton}
-                                      type="submit"
-                                      primary={true}/>
-                    </div>
-                </form>
-            </PageBase>
-        );
-    }
+                    <RaisedButton label="Save"
+                                  style={styles.saveButton}
+                                  type="submit"
+                                  primary={true}/>
+                </div>
+            </form>
+        </PageBase>
+    );
 };
 
 export default SidePanel;

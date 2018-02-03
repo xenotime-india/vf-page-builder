@@ -7,7 +7,7 @@ const DashboardPage = (props) => {
     return (
         <Flex>
             <Box w={1/4} p={1}>
-                <SidePanel objects={props.objects}/>
+                <SidePanel { ...props }/>
             </Box>
             <Box w={3/4} p={1}>
                 <OutputPanel/>

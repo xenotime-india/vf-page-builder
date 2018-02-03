@@ -6,3 +6,8 @@ export function fetchCustomObjects() {
     const connection = sforce();
     return connection.metadata.list([{type: 'CustomObject', folder: null}], apiVersion);
 }
+
+export function fetchPageLayout(Object) {
+    const connection = sforce();
+    return connection.query('SELECT FullName FROM Layout WHERE TableEnumOrId = \'' + Object + '\'');
+}

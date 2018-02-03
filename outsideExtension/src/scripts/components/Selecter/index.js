@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MenuItem from 'material-ui/MenuItem';
 import SelectField from 'material-ui/SelectField';
 
-export default class CustomObjectSelector extends Component {
+export default class Selector extends Component {
 
     handleChange(event, index, value) {
         // this.setState({ lang: value });
@@ -19,10 +19,9 @@ export default class CustomObjectSelector extends Component {
 
     render() {
         return (<SelectField
-            floatingLabelText="Custom Object"
+            floatingLabelText={this.props.floatingLabelText}
             value={this.props.selectedObject}
-            onChange={this.handleChange.bind(this)}
-        >
+            onChange={this.handleChange.bind(this)}>
             { this.selectItemsMap() }
         </SelectField>);
     }
