@@ -48,6 +48,9 @@ module.exports = {
         new webpack.optimize.ModuleConcatenationPlugin(),
         new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
         new webpack.HotModuleReplacementPlugin(),
+        new webpack.DefinePlugin({
+            __DEV__: JSON.stringify(true)
+        }),
     ],
     stats: {
         colors: true
